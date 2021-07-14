@@ -44,7 +44,7 @@ add_random_scientist_leader_trait = {
 					OR = {
 						has_xp_bonus_leader_trait = yes
 						has_xp_penalty_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_bonus_leader_trait = yes
@@ -56,7 +56,7 @@ add_random_scientist_leader_trait = {
 						has_trait = leader_trait_resilient
 						has_trait = leader_trait_substance_abuser
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_resilient
@@ -70,7 +70,7 @@ add_random_scientist_leader_trait = {
 					OR = {
 						has_xp_penalty_leader_trait = yes
 						has_xp_bonus_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_penalty_leader_trait = yes
@@ -82,7 +82,7 @@ add_random_scientist_leader_trait = {
 						has_trait = leader_trait_substance_abuser
 						has_trait = leader_trait_resilient
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_substance_abuser
@@ -278,7 +278,7 @@ add_random_scientist_leader_trait = {
 					factor = 0
 					has_trait = leader_trait_expertise_psionics
 					is_robotic_species = yes
-					is_hive_species = yes
+					species = { has_trait = trait_hive_mind }
 				}
 				add_trait = leader_trait_expertise_psionics
 				set_timed_leader_flag = { flag = gained_leader_trait_expertise_psionics days = 7 }
@@ -348,7 +348,7 @@ add_random_admiral_leader_trait = {
 					OR = {
 						has_xp_bonus_leader_trait = yes
 						has_xp_penalty_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_bonus_leader_trait = yes
@@ -360,7 +360,7 @@ add_random_admiral_leader_trait = {
 						has_trait = leader_trait_resilient
 						has_trait = leader_trait_substance_abuser
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_resilient
@@ -374,7 +374,7 @@ add_random_admiral_leader_trait = {
 					OR = {
 						has_xp_penalty_leader_trait = yes
 						has_xp_bonus_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_penalty_leader_trait = yes
@@ -386,7 +386,7 @@ add_random_admiral_leader_trait = {
 						has_trait = leader_trait_substance_abuser
 						has_trait = leader_trait_resilient
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_substance_abuser
@@ -560,7 +560,7 @@ add_random_governor_leader_trait = {
 					OR = {
 						has_xp_bonus_leader_trait = yes
 						has_xp_penalty_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_bonus_leader_trait = yes
@@ -572,7 +572,7 @@ add_random_governor_leader_trait = {
 						has_trait = leader_trait_resilient
 						has_trait = leader_trait_substance_abuser
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_resilient
@@ -586,7 +586,7 @@ add_random_governor_leader_trait = {
 					OR = {
 						has_xp_penalty_leader_trait = yes
 						has_xp_bonus_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 						owner = { has_valid_civic = civic_philosopher_king }
 					}
 				}
@@ -599,7 +599,7 @@ add_random_governor_leader_trait = {
 						has_trait = leader_trait_substance_abuser
 						has_trait = leader_trait_resilient
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 						owner = { has_valid_civic = civic_philosopher_king }
 					}
 				}
@@ -847,7 +847,7 @@ add_random_general_leader_trait = {
 					OR = {
 						has_xp_bonus_leader_trait = yes
 						has_xp_penalty_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_bonus_leader_trait = yes
@@ -859,7 +859,7 @@ add_random_general_leader_trait = {
 						has_trait = leader_trait_resilient
 						has_trait = leader_trait_substance_abuser
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_resilient
@@ -873,7 +873,7 @@ add_random_general_leader_trait = {
 					OR = {
 						has_xp_penalty_leader_trait = yes
 						has_xp_bonus_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_penalty_leader_trait = yes
@@ -884,7 +884,7 @@ add_random_general_leader_trait = {
 					OR = {
 						has_trait = leader_trait_substance_abuser
 						has_trait = leader_trait_resilient
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_ruler_trait = leader_trait_substance_abuser
@@ -1044,7 +1044,7 @@ add_random_ruler_leader_trait = {
 					OR = {
 						has_xp_bonus_leader_trait = yes
 						has_xp_penalty_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_xp_bonus_leader_trait = yes
@@ -1056,7 +1056,7 @@ add_random_ruler_leader_trait = {
 						has_trait = leader_trait_resilient
 						has_trait = leader_trait_substance_abuser
 						is_robotic_species = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 					}
 				}
 				add_trait = leader_trait_resilient
@@ -1069,7 +1069,7 @@ add_random_ruler_leader_trait = {
 					OR = {
 						has_xp_penalty_leader_trait = yes
 						has_xp_bonus_leader_trait = yes
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 						owner = { has_valid_civic = civic_philosopher_king }
 					}
 				}
@@ -1081,7 +1081,7 @@ add_random_ruler_leader_trait = {
 					OR = {
 						has_trait = leader_trait_substance_abuser
 						has_trait = leader_trait_resilient
-						is_hive_species = yes
+						species = { has_trait = trait_hive_mind }
 						owner = { has_valid_civic = civic_philosopher_king }
 					}
 				}
