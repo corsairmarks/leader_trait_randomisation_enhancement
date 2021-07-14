@@ -17,12 +17,14 @@ country_event = {
 	# trigger to filter out leaders who have gained a trait
 	trigger = {
 		exists = FROM
-		NOR = {
-			has_leader_flag = has_gained_level_trait
-			num_traits >= 3
-			AND = {
-				leader_class = ruler
-				owner = { is_gestalt = yes }
+		FROM = {
+			NOR = {
+				has_leader_flag = has_gained_level_trait
+				num_traits >= 3
+				AND = {
+					leader_class = ruler
+					owner = { is_gestalt = yes }
+				}
 			}
 		}
 	}
