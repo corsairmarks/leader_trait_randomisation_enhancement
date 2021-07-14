@@ -1,6 +1,6 @@
 # Overview
 
-Frustrated that some leader traits can't be gains on level-up?  Or maybe you'd like your robotic/synthetic leaders to use the machine-specific traits too?  Then this mod is for you!
+Frustrated that some leader traits can't be gained on level-up?  Or maybe you'd like your robotic/synthetic leaders to use the machine-specific traits too?  Then this mod is for you!
 
 The code in this mod polishes some of the code from the base game to work better and offer options that may have been forgotten when new traits were added or systems were redesigned.
 
