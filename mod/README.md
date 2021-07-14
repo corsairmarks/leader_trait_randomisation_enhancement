@@ -40,7 +40,8 @@ This mod can be safely added to or removed from your savegame after the game has
 This mod overwrites one effect and preempts one event from the base game.  Expect to see two lines in error.log like this:
 
 ```
-
+[20:47:35][game_singleobjectdatabase.h:147]: Object with key: add_random_leader_trait already exists
+[20:47:35][eventmanager.cpp:355]: an event with id [leader.20] already exists!  file: events/leader_events_1.txt line: 950
 ```
 
 What this means to you is that this mod will need a compatibility patch to work woth other mods that alter the same base Stellaris content.
