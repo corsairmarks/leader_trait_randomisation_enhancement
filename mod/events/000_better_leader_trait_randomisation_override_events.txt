@@ -14,7 +14,7 @@ country_event = {
 	id = leader.20
 	hide_window = yes
 	is_triggered_only = yes
-	# trigger to filter out leaders who have gained a trait
+	# trigger to filter out leaders who have already gained a trait
 	trigger = {
 		exists = FROM
 		FROM = {
