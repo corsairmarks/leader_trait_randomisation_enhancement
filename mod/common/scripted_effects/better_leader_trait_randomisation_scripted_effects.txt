@@ -6,30 +6,75 @@ add_random_leader_trait = {
 # separate effect so that compat patches can just call this one if they also want to override add_random_leader_trait
 # leader scope
 add_random_leader_trait_inner = {
+	set_variable = {
+		which = should_suppress_traid_added_notification
+		value = $SUPPRESS_NOTIFICATION|0$
+	}
 	switch = {
 		trigger = leader_class
 		scientist = {
 			add_random_scientist_leader_trait = yes
-			owner = { country_event = { id = leader.21 } }
+			if = {
+				limit = {
+					check_variable = {
+						which = should_suppress_traid_added_notification
+						value = 0
+					}
+				}
+				owner = { country_event = { id = leader.21 } }
+			}
 		}
 		admiral = {
 			add_random_admiral_leader_trait = yes
-			owner = { country_event = { id = leader.22 } }
+			if = {
+				limit = {
+					check_variable = {
+						which = should_suppress_traid_added_notification
+						value = 0
+					}
+				}
+				owner = { country_event = { id = leader.22 } }
+			}
 		}
 		governor = {
 			add_random_governor_leader_trait = yes
-			owner = { country_event = { id = leader.23 } }
+			if = {
+				limit = {
+					check_variable = {
+						which = should_suppress_traid_added_notification
+						value = 0
+					}
+				}
+				owner = { country_event = { id = leader.23 } }
+			}
 		}
 		general = {
 			add_random_general_leader_trait = yes
-			owner = { country_event = { id = leader.24 } }
+			if = {
+				limit = {
+					check_variable = {
+						which = should_suppress_traid_added_notification
+						value = 0
+					}
+				}
+				owner = { country_event = { id = leader.24 } }
+			}
 		}
 		ruler = {
 			add_random_ruler_leader_trait = yes
-			owner = { country_event = { id = leader.25 } }
+			if = {
+				limit = {
+					check_variable = {
+						which = should_suppress_traid_added_notification
+						value = 0
+					}
+				}
+				owner = { country_event = { id = leader.25 } }
+			}
 		}
 		# envoys don't have traits... yet
 	}
+	clear_variable = should_suppress_traid_added_notification
 }
 
 # leader scope
@@ -66,6 +111,7 @@ add_random_scientist_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_xp_penalty_leader_trait = yes
 					has_xp_bonus_leader_trait = yes
 					species = { has_trait = trait_hive_mind }
@@ -77,6 +123,7 @@ add_random_scientist_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_substance_abuser
 					has_trait = leader_trait_resilient
 					is_robotic_species = yes
@@ -92,6 +139,7 @@ add_random_scientist_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_arrested_development
 					owner = { has_valid_civic = civic_hive_one_mind }
 				}
@@ -322,6 +370,7 @@ add_random_scientist_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_paranoid
 					owner = { has_valid_civic = civic_hive_one_mind }
 				}
@@ -367,6 +416,7 @@ add_random_admiral_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_xp_penalty_leader_trait = yes
 					has_xp_bonus_leader_trait = yes
 					species = { has_trait = trait_hive_mind }
@@ -378,6 +428,7 @@ add_random_admiral_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_substance_abuser
 					has_trait = leader_trait_resilient
 					is_robotic_species = yes
@@ -393,6 +444,7 @@ add_random_admiral_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_arrested_development
 					owner = { has_valid_civic = civic_hive_one_mind }
 				}
@@ -517,6 +569,7 @@ add_random_admiral_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_lethargic
 					has_trait = leader_trait_gale_speed
 					owner = { has_valid_civic = civic_hive_one_mind }
@@ -576,6 +629,7 @@ add_random_governor_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_xp_penalty_leader_trait = yes
 					has_xp_bonus_leader_trait = yes
 					species = { has_trait = trait_hive_mind }
@@ -588,6 +642,7 @@ add_random_governor_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_substance_abuser
 					has_trait = leader_trait_resilient
 					is_robotic_species = yes
@@ -604,6 +659,7 @@ add_random_governor_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_arrested_development
 					owner = {
 						OR = {
@@ -623,6 +679,7 @@ add_random_governor_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_corrupt
 					has_trait = leader_trait_righteous
 					owner = {
@@ -822,7 +879,6 @@ add_random_governor_leader_trait = {
 			}
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
-
 	}
 }
 
@@ -860,6 +916,7 @@ add_random_general_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_xp_penalty_leader_trait = yes
 					has_xp_bonus_leader_trait = yes
 					species = { has_trait = trait_hive_mind }
@@ -871,6 +928,7 @@ add_random_general_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_substance_abuser
 					has_trait = leader_trait_resilient
 					species = { has_trait = trait_hive_mind }
@@ -885,6 +943,7 @@ add_random_general_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_arrested_development
 					owner = { has_valid_civic = civic_hive_one_mind }
 				}
@@ -969,6 +1028,7 @@ add_random_general_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_armchair_commander
 					has_trait = leader_trait_erratic_morality_core
 					has_trait = leader_trait_glory_seeker
@@ -1053,6 +1113,7 @@ add_random_ruler_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_xp_penalty_leader_trait = yes
 					has_xp_bonus_leader_trait = yes
 					species = { has_trait = trait_hive_mind }
@@ -1065,6 +1126,7 @@ add_random_ruler_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_substance_abuser
 					has_trait = leader_trait_resilient
 					species = { has_trait = trait_hive_mind }
@@ -1079,6 +1141,7 @@ add_random_ruler_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_skill <= 1
 					has_trait = leader_trait_arrested_development
 					owner = {
 						OR = {
@@ -1509,6 +1572,7 @@ ensure_appropriate_leader_traits = {
 	}
 	else_if = {
 		limit = { has_synthethic_dawn = yes }
+		log = "swapping org to machine"
 		swap_leader_traits_organic_to_machine = yes
 	}
 	remove_invalid_leader_traits = yes
@@ -1678,92 +1742,114 @@ remove_invalid_leader_traits = {
 		if = {
 			limit = { has_ruler_trait = leader_trait_ruler_machine_intelligence }
 			remove_ruler_trait = leader_trait_ruler_machine_intelligence
+			log = "removed leader_trait_ruler_machine_intelligence"
 		}
 		if = {
 			limit = { has_trait = leader_trait_flexible_programming }
 			remove_trait = leader_trait_flexible_programming
+			log = "removed leader_trait_flexible_programming"
 		}
 		if = {
 			limit = { has_ruler_trait = leader_trait_flexible_programming }
 			remove_ruler_trait = leader_trait_flexible_programming
+			log = "removed leader_trait_flexible_programming"
 		}
 		if = {
 			limit = { has_trait = leader_trait_rigid_programming }
 			remove_trait = leader_trait_rigid_programming
+			log = "removed leader_trait_rigid_programming"
 		}
 		if = {
 			limit = { has_ruler_trait = leader_trait_rigid_programming }
 			remove_ruler_trait = leader_trait_rigid_programming
+			log = "removed leader_trait_rigid_programming"
 		}
 		if = {
 			limit = { has_trait = leader_trait_newboot }
 			remove_trait = leader_trait_newboot
+			log = "removed leader_trait_newboot"
 		}
 		if = {
 			limit = { has_trait = leader_trait_warbot_tinkerer }
 			remove_trait = leader_trait_warbot_tinkerer
+			log = "removed leader_trait_warbot_tinkerer"
 		}
 		if = {
 			limit = { has_trait = leader_trait_ai_aided_design }
 			remove_trait = leader_trait_ai_aided_design
+			log = "removed leader_trait_ai_aided_design"
 		}
 		if = {
 			limit = { has_trait = leader_trait_bulldozer }
 			remove_trait = leader_trait_bulldozer
+			log = "removed leader_trait_bulldozer"
 		}
 		if = {
 			limit = { has_trait = leader_trait_analytical }
 			remove_trait = leader_trait_analytical
+			log = "removed leader_trait_analytical"
 		}
 		if = {
 			limit = { has_trait = leader_trait_parts_cannibalizer }
 			remove_trait = leader_trait_parts_cannibalizer
+			log = "removed leader_trait_parts_cannibalizer"
 		}
 		if = {
 			limit = { has_trait = leader_trait_erratic_morality_core }
 			remove_trait = leader_trait_erratic_morality_core
+			log = "removed leader_trait_erratic_morality_core"
 		}
 		if = {
 			limit = { has_trait = leader_trait_maintenance_loop }
 			remove_trait = leader_trait_maintenance_loop
+			log = "removed leader_trait_maintenance_loop"
 		}
 		if = {
 			limit = { has_trait = leader_trait_unstable_code_base }
 			remove_trait = leader_trait_unstable_code_base
+			log = "removed leader_trait_unstable_code_base"
 		}
 		if = {
 			limit = { has_trait = leader_trait_cataloger }
 			remove_trait = leader_trait_cataloger
+			log = "removed leader_trait_cataloger"
 		}
 		if = {
 			limit = { has_trait = leader_trait_restore_point }
 			remove_trait = leader_trait_restore_point
+			log = "removed leader_trait_restore_point"
 		}
 	}
 	else = {
 		if = {
 			limit = { has_trait = leader_trait_resilient }
 			remove_trait = leader_trait_resilient
+			log = "removed leader_trait_resilient"
 		}
 		if = {
 			limit = { has_ruler_trait = leader_trait_resilient }
 			remove_ruler_trait = leader_trait_resilient
+			log = "removed leader_trait_resilient"
 		}
 		if = {
 			limit = { has_trait = leader_trait_shroud_age }
 			remove_trait = leader_trait_shroud_age
+			log = "removed leader_trait_shroud_age"
 		}
 		if = {
 			limit = { has_ruler_trait = leader_trait_shroud_age }
 			remove_ruler_trait = leader_trait_shroud_age
+			log = "removed leader_trait_shroud_age"
 		}
 		if = {
 			limit = { has_trait = leader_trait_substance_abuser }
 			remove_trait = leader_trait_substance_abuser
+			log = "removed leader_trait_substance_abuser"
 		}
 		if = {
 			limit = { has_ruler_trait = leader_trait_substance_abuser }
 			remove_ruler_trait = leader_trait_substance_abuser
+			log = "removed leader_trait_substance_abuser"
 		}
 		# only purge bio traits if they have syndaw installed - otherwise we'll just be leaving them with traitless leaders
 		if = {
@@ -1771,58 +1857,72 @@ remove_invalid_leader_traits = {
 			if = {
 				limit = { has_trait = leader_trait_adaptable }
 				remove_trait = leader_trait_adaptable
+				log = "removed leader_trait_adaptable"
 			}
 			if = {
 				limit = { has_ruler_trait = leader_trait_adaptable }
 				remove_ruler_trait = leader_trait_adaptable
+				log = "removed leader_trait_adaptable"
 			}
 			if = {
 				limit = { has_trait = leader_trait_stubborn }
 				remove_trait = leader_trait_stubborn
+				log = "removed leader_trait_stubborn"
 			}
 			if = {
 				limit = { has_ruler_trait = leader_trait_stubborn }
 				remove_ruler_trait = leader_trait_stubborn
+				log = "removed leader_trait_stubborn"
 			}
 			if = {
 				limit = { has_trait = leader_trait_eager }
 				remove_trait = leader_trait_eager
+				log = "removed leader_trait_eager"
 			}
 			if = {
 				limit = { has_trait = leader_trait_army_veteran }
 				remove_trait = leader_trait_army_veteran
+				log = "removed leader_trait_army_veteran"
 			}
 			if = {
 				limit = { has_trait = leader_trait_retired_fleet_officer }
 				remove_trait = leader_trait_retired_fleet_officer
+				log = "removed leader_trait_retired_fleet_officer"
 			}
 			if = {
 				limit = { has_trait = leader_trait_environmental_engineer }
 				remove_trait = leader_trait_environmental_engineer
+				log = "removed leader_trait_environmental_engineer"
 			}
 			if = {
 				limit = { has_trait = leader_trait_intellectual }
 				remove_trait = leader_trait_intellectual
+				log = "removed leader_trait_intellectual"
 			}
 			if = {
 				limit = { has_trait = leader_trait_army_logistician }
 				remove_trait = leader_trait_army_logistician
+				log = "removed leader_trait_army_logistician"
 			}
 			if = {
 				limit = { has_trait = leader_trait_armchair_commander }
 				remove_trait = leader_trait_armchair_commander
+				log = "removed leader_trait_armchair_commander"
 			}
 			if = {
 				limit = { has_trait = leader_trait_fleet_logistician }
 				remove_trait = leader_trait_fleet_logistician
+				log = "removed leader_trait_fleet_logistician"
 			}
 			if = {
 				limit = { has_trait = leader_trait_nervous }
 				remove_trait = leader_trait_nervous
+				log = "removed leader_trait_nervous"
 			}
 			if = {
 				limit = { has_trait = leader_trait_roamer }
 				remove_trait = leader_trait_roamer
+				log = "removed leader_trait_roamer"
 			}
 		}
 	}
@@ -1942,10 +2042,140 @@ remove_invalid_leader_traits = {
 
 # leader scope
 add_missing_leader_traits = {
-	if = {
-		limit = { num_traits < 1 }
-		add_random_leader_trait = yes
+	set_variable = {
+		which = species_leader_trait_accumulator
+		value = 0
 	}
+	species = {
+		if = {
+			limit = {
+				has_trait = trait_brainslug
+				PREV = { is_leader_brainslugged = yes }
+			}
+			PREV = {
+				change_variable = {
+					which = species_leader_trait_accumulator
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_trait = trait_latent_psionic
+						PREV = { is_leader_psionic = yes }
+					}
+					has_trait = trait_psionic
+				}
+			}
+			PREV = {
+				change_variable = {
+					which = species_leader_trait_accumulator
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = trait_erudite }
+			PREV = {
+				change_variable = {
+					which = species_leader_trait_accumulator
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = { has_trait = trait_cybernetic }
+			PREV = {
+				change_variable = {
+					which = species_leader_trait_accumulator
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = trait_mechanical
+				PREV.owner = {
+					OR = {
+						is_synthetic_empire = yes
+						has_technology = tech_synthetic_leaders
+					}
+				}
+			}
+			PREV = {
+				change_variable = {
+					which = species_leader_trait_accumulator
+					value = 1
+				}
+			}
+		}
+	}
+
+	# if we ever get the ability to export triggers, or compare them to variables, this can be simplified
+	if = {
+		limit = {
+			check_variable = {
+				which = species_leader_trait_accumulator
+				value = 5
+			}
+		}
+		while = {
+			limit = { num_traits < 6 }
+			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = species_leader_trait_accumulator
+				value = 4
+			}
+		}
+		while = {
+			limit = { num_traits < 5 }
+			add_random_leader_trait_inner = yes
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = species_leader_trait_accumulator
+				value = 3
+			}
+		}
+		while = {
+			limit = { num_traits < 4 }
+			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = species_leader_trait_accumulator
+				value = 2
+			}
+		}
+		while = {
+			limit = { num_traits < 3 }
+			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = species_leader_trait_accumulator
+				value = 1
+			}
+		}
+		while = {
+			limit = { num_traits < 2 }
+			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
+		}
+	}
+
+	clear_variable = species_leader_trait_accumulator
 }
 
 # leader scope
