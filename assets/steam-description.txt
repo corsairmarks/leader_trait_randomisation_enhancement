@@ -16,7 +16,7 @@ The code in this mod polishes some of the code from the base game to work better
 [*]Scientists can now get a Sapient AI Assistant on level-up if the correct technology is unlocked
 [*]Code for adding random traits generally respects the "opposites" blocks of each trait, except that scientists are not limited to only one scientific expertise (scientists could already have multiple expertises in the base game, despite the opposites block on all of the traits)
 [*]Governors can roll Agrarian Upbringing, Bureaucrat (or equivalent), or army/navy related traits upon level up - this make a bit less narrative sense for Agrarian Upbringing and the former military traits, but I felt it was unfair to lock their benefits to only newly generated leaders
-[*]Rulers can now roll "From the Ranks" and "Reformer" - the army related trait makes less narrative sense to add randomly, but politicians can definitely become reformers during their tenure
+[*]Rulers can now roll "Space Miner," "From the Ranks," and "Reformer" - the army related trait makes less narrative sense to add randomly, but politicians can definitely become reformers during their tenure
 [/list]
 
 [h2]Compatibility[/h2]

@@ -1386,6 +1386,18 @@ add_random_ruler_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
+					has_ruler_trait = trait_ruler_space_miner
+					has_trait = trait_ruler_space_miner
+				}
+			}
+			add_ruler_trait = trait_ruler_space_miner
+			set_timed_leader_flag = { flag = gained_trait_ruler_space_miner days = 7 }
+			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = {
 					has_ruler_trait = trait_ruler_explorer
 					has_trait = trait_ruler_explorer
 				}
