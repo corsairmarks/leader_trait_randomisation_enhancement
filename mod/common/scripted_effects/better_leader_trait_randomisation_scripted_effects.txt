@@ -1572,11 +1572,10 @@ ensure_appropriate_leader_traits = {
 	}
 	else_if = {
 		limit = { has_synthethic_dawn = yes }
-		log = "swapping org to machine"
 		swap_leader_traits_organic_to_machine = yes
 	}
 	remove_invalid_leader_traits = yes
-	add_missing_leader_traits = yes
+	ensure_minimum_one_random_trait = yes
 	resolve_conflicting_leader_traits = yes
 	convert_bureaucrat_leader_traits = yes
 }
@@ -2041,84 +2040,72 @@ remove_invalid_leader_traits = {
 }
 
 # leader scope
-add_missing_leader_traits = {
+ensure_minimum_one_random_trait = {
 	set_variable = {
 		which = species_leader_trait_accumulator
-		value = 0
+		value = 1
 	}
-	species = {
-		if = {
-			limit = {
-				has_trait = trait_brainslug
-				PREV = { is_leader_brainslugged = yes }
-			}
-			PREV = {
-				change_variable = {
-					which = species_leader_trait_accumulator
-					value = 1
-				}
-			}
+	if = {
+		limit = { is_leader_brainslugged = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
 		}
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						has_trait = trait_latent_psionic
-						PREV = { is_leader_psionic = yes }
-					}
-					has_trait = trait_psionic
-				}
-			}
-			PREV = {
-				change_variable = {
-					which = species_leader_trait_accumulator
-					value = 1
-				}
-			}
+	}
+	if = {
+		limit = { is_leader_psionic = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
 		}
-		if = {
-			limit = { has_trait = trait_erudite }
-			PREV = {
-				change_variable = {
-					which = species_leader_trait_accumulator
-					value = 1
-				}
-			}
+	}
+	if = {
+		limit = { is_leader_chosen = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
 		}
-		if = {
-			limit = { has_trait = trait_cybernetic }
-			PREV = {
-				change_variable = {
-					which = species_leader_trait_accumulator
-					value = 1
-				}
-			}
+	}
+	if = {
+		limit = { is_leader_erudite = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
 		}
-		if = {
-			limit = {
-				has_trait = trait_mechanical
-				PREV.owner = {
-					OR = {
-						is_synthetic_empire = yes
-						has_technology = tech_synthetic_leaders
-					}
-				}
-			}
-			PREV = {
-				change_variable = {
-					which = species_leader_trait_accumulator
-					value = 1
-				}
-			}
+	}
+	if = {
+		limit = { is_leader_cyborg = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
+		}
+	}
+	if = {
+		limit = { is_leader_synthetic = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
 		}
 	}
 
-	# if we ever get the ability to export triggers, or compare them to variables, this can be simplified
+	# if we ever get the ability to export triggers or compare them to variables, this can be simplified
 	if = {
 		limit = {
 			check_variable = {
 				which = species_leader_trait_accumulator
-				value = 5
+				value = 7
+			}
+		}
+		while = {
+			limit = { num_traits < 7 }
+			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = species_leader_trait_accumulator
+				value = 6
 			}
 		}
 		while = {
@@ -2130,19 +2117,19 @@ add_missing_leader_traits = {
 		limit = {
 			check_variable = {
 				which = species_leader_trait_accumulator
-				value = 4
+				value = 5
 			}
 		}
 		while = {
 			limit = { num_traits < 5 }
-			add_random_leader_trait_inner = yes
+			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
 		}
 	}
 	else_if = {
 		limit = {
 			check_variable = {
 				which = species_leader_trait_accumulator
-				value = 3
+				value = 4
 			}
 		}
 		while = {
@@ -2154,7 +2141,7 @@ add_missing_leader_traits = {
 		limit = {
 			check_variable = {
 				which = species_leader_trait_accumulator
-				value = 2
+				value = 3
 			}
 		}
 		while = {
@@ -2166,13 +2153,17 @@ add_missing_leader_traits = {
 		limit = {
 			check_variable = {
 				which = species_leader_trait_accumulator
-				value = 1
+				value = 2
 			}
 		}
 		while = {
 			limit = { num_traits < 2 }
 			add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
 		}
+	}
+	else_if = {
+		limit = { num_traits < 1 }
+		add_random_leader_trait_inner = { SUPPRESS_NOTIFICATION = 1 }
 	}
 
 	clear_variable = species_leader_trait_accumulator
