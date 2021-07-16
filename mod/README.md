@@ -32,9 +32,9 @@ What all this means to you is that this mod will be widely compatible with other
 
 Like leaders?  Try a couple of my other leader-related mods that work with this one.
 
-* [Enable All Eligible Species Traits for Leaders](https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295) will ensure your leaders get all their species-based traits when being assimilated (such as Psionic or Erudite)
-* [Scientist AI Assistant Upgrader](https://steamcommunity.com/sharedfiles/filedetails/?id=2498166286) will help your scientists upgrade to "Sapient AI Assistants" from "Custom AI Assistants" when you discover the right technology
-* [Retain Leaders from Integrated Subjects]() will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives.
+* [Leader Traits: All Eligible Species Traits](https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295) will ensure your leaders get all their species-based traits when being assimilated (such as Psionic or Erudite)
+* [Leader Traits: Scientist AI Assistant Upgrader](https://steamcommunity.com/sharedfiles/filedetails/?id=2498166286) will help your scientists upgrade to "Sapient AI Assistants" from "Custom AI Assistants" when you discover the right technology
+* [Retain Leaders from Integrated Subjects]() will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives
 
 ### When to Install
 
