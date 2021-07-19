@@ -74,8 +74,8 @@ country_event = {
 	}
 }
 
-# fired by on_leader_species_changed
-# event to adjust a leader's traits whenever their species was set or changed
+# fired by on_leader_species_changed and on_leader_owner_changed
+# event to adjust a leader's traits whenever their species was set or changed, or their owner changed
 leader_event = {
 	id = better_leader_trait_randomization.70
 	is_triggered_only = yes

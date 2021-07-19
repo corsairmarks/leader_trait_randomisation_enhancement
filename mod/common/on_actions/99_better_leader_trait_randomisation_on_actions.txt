@@ -17,12 +17,20 @@ on_modification_complete = {
 	}
 }
 
-# Fires when my custom code changes a leader's species.  You might attach an event
+# Fired when my custom code changes a leader's species.  You might attach an event
 # here to handle custom traits in another mod that should be added or removed (or
 # converted) based on information about the leader (possibly taking in to account
-# things like their owner).
+# things like their current owner).
 # THIS = leader (post-modification)
 on_leader_species_changed = {
+	events = {
+		better_leader_trait_randomization.70
+	}
+}
+
+# fired when my custom code changes a leader's owner
+# THIS = leader (post-owner change)
+on_leader_owner_changed = {
 	events = {
 		better_leader_trait_randomization.70
 	}
