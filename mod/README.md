@@ -21,6 +21,7 @@ The code in this mod polishes some of the code from the base game to work better
     * Army Veteran is now Military Liaison
     * Retired Fleet Officer is now Naval Liaison
     * From the Ranks wasn't renamed - I felt the name fit the effect very well - maybe it can be justified as leader's military experience becoming more widely known?
+    * This only applies when the trait in question is randomly added - the original localisation is used if the leader starts with it
 
 ## Compatibility
 

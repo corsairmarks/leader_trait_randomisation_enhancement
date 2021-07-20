@@ -1,0 +1,127 @@
+defined_text = { # leader scope
+	name = GetAgrarianUpbringingName
+	text = {
+		trigger = {
+			has_leader_flag = leader_trait_agrarian_upbringing_randomised
+		}
+		localization_key = leader_trait_agrarian_upbringing_randomised
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = leader_trait_agrarian_upbringing_randomised }
+		}
+		localization_key = leader_trait_agrarian_upbringing_original
+	}
+}
+
+defined_text = { # leader scope
+	name = GetAgrarianUpbringingDesc
+	text = {
+		trigger = {
+			has_leader_flag = leader_trait_agrarian_upbringing_randomised
+		}
+		localization_key = leader_trait_agrarian_upbringing_randomised_desc
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = leader_trait_agrarian_upbringing_randomised }
+		}
+		localization_key = leader_trait_agrarian_upbringing_original_desc
+	}
+}
+
+defined_text = { # leader scope
+	name = GetArmyVeteranName
+	text = {
+		trigger = {
+			has_leader_flag = leader_trait_army_veteran_randomised
+		}
+		localization_key = leader_trait_army_veteran_randomised
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = leader_trait_army_veteran_randomised }
+		}
+		localization_key = leader_trait_army_veteran_original
+	}
+}
+
+defined_text = { # leader scope
+	name = GetArmyVeteranDesc
+	text = {
+		trigger = {
+			has_leader_flag = leader_trait_army_veteran_randomised
+		}
+		localization_key = leader_trait_army_veteran_randomised_desc
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = leader_trait_army_veteran_randomised }
+		}
+		localization_key = leader_trait_army_veteran_original_desc
+	}
+}
+
+defined_text = { # leader scope
+	name = GetRetiredFleetOfficerName
+	text = {
+		trigger = {
+			has_leader_flag = leader_trait_retired_fleet_officer_randomised
+		}
+		localization_key = leader_trait_retired_fleet_officer_randomised
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = leader_trait_retired_fleet_officer_randomised }
+		}
+		localization_key = leader_trait_retired_fleet_officer_original
+	}
+}
+
+defined_text = { # leader scope
+	name = GetRetiredFleetOfficerDesc
+	text = {
+		trigger = {
+			has_leader_flag = leader_trait_retired_fleet_officer_randomised
+		}
+		localization_key = leader_trait_retired_fleet_officer_randomised_desc
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = leader_trait_retired_fleet_officer_randomised }
+		}
+		localization_key = leader_trait_retired_fleet_officer_original_desc
+	}
+}
+
+defined_text = { # leader scope
+	name = GetFromTheRanksName
+	text = {
+		trigger = {
+			has_leader_flag = trait_ruler_from_the_ranks_randomised
+		}
+		localization_key = trait_ruler_from_the_ranks_randomised
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = trait_ruler_from_the_ranks_randomised }
+		}
+		localization_key = trait_ruler_from_the_ranks_original
+	}
+}
+
+defined_text = { # leader scope
+	name = GetFromTheRanksDesc
+	text = {
+		trigger = {
+			has_leader_flag = trait_ruler_from_the_ranks_randomised
+		}
+		localization_key = trait_ruler_from_the_ranks_randomised_desc
+	}
+	text = {
+		trigger = {
+			NOT = { has_leader_flag = trait_ruler_from_the_ranks_randomised }
+		}
+		localization_key = trait_ruler_from_the_ranks_original_desc
+	}
+}

@@ -777,6 +777,7 @@ add_random_governor_leader_trait = {
 					owner = { NOT = { has_technology = tech_centralized_command } }
 				}
 			}
+			set_leader_flag = leader_trait_army_veteran_randomised
 			if = {
 				limit = {
 					OR = {
@@ -804,6 +805,7 @@ add_random_governor_leader_trait = {
 					owner = { NOT = { has_technology = tech_interstellar_fleet_traditions } }
 				}
 			}
+			set_leader_flag = leader_trait_retired_fleet_officer_randomised
 			if = {
 				limit = {
 					OR = {
@@ -836,6 +838,7 @@ add_random_governor_leader_trait = {
 				}
 			}
 			add_trait = leader_trait_agrarian_upbringing
+			set_leader_flag = leader_trait_agrarian_upbringing_randomised
 			set_timed_leader_flag = { flag = gained_leader_trait_agrarian_upbringing days = 7 }
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
@@ -1250,6 +1253,7 @@ add_random_ruler_leader_trait = {
 				}
 			}
 			add_ruler_trait = trait_ruler_from_the_ranks
+			set_leader_flag = trait_ruler_from_the_ranks_randomised
 			set_timed_leader_flag = { flag = gained_trait_ruler_from_the_ranks days = 7 }
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
@@ -1690,6 +1694,7 @@ swap_leader_traits_machine_to_organic = {
 		limit = { has_trait = leader_trait_ai_aided_design }
 		remove_trait = leader_trait_ai_aided_design
 		add_trait = leader_trait_retired_fleet_officer
+
 	}
 	if = {
 		limit = { has_trait = leader_trait_bulldozer }
