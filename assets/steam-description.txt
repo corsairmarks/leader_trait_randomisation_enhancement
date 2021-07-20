@@ -13,6 +13,7 @@ The code in this mod polishes some of the code from the base game to work better
 [*]Handles machine trait alternatives better in code
 [*]Machine/robot leaders get machine traits where there are equivalents to the "normal" traits
 [*]Machine/robot admirals can now gain a Restore Point (this built-in trait was not coded to be randomly added but had a small chance to appear when leaders were initially generated)
+[*]Machine/robot leaders have lifespan-altering traits removed (they are immortal)
 [*]Scientists can now get a Sapient AI Assistant on level-up if the correct technology is unlocked
 [*]Code for adding random traits generally respects the "opposites" blocks of each trait, except that scientists are not limited to only one scientific expertise (scientists could already have multiple expertises in the base game, despite the opposites block on all of the traits)
 [*]Governors can roll Agrarian Upbringing, Bureaucrat (or equivalent), or army/navy related traits upon level up - this make a bit less narrative sense for Agrarian Upbringing and the former military traits, but I felt it was unfair to lock their benefits to only newly generated leaders
@@ -24,6 +25,9 @@ The code in this mod polishes some of the code from the base game to work better
 	[*]Retired Fleet Officer is now Naval Liaison
 	[*]From the Ranks wasn't renamed - I felt the name fit the effect very well - maybe it can be justified as leader's military experience becoming more widely known?
 	[/list]
+[*]Leaders now gain the regular and "ruler" version of generic traits (+/-experience, +/-lifespan, Arrested Development) (and if they gain one while being a ruler, it transfers back to their regular class)
+[*]Leaders that have "ruler" generic traits (invisible until a leader becomes a ruler) have it/them removed and rerolled to another non-generic trait - together with the above point, this will help leaders always benefit from their generic traits when they are rulers (e.g. not losing Resilient and then dying)
+[*]Leaders with opposing traits, e.g. Adaptable and Stubborn, will have the negative trait removed (this mod should no longer roll them at all, so this fix is for any existing leaders you have)
 [/list]
 
 [h2]Compatibility[/h2]
