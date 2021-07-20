@@ -1,4 +1,4 @@
-name="Leader Traits: Better Randomisation"
+name="Leader Traits: Enhanced Randomisation"
 tags={
 	"Events"
 	"Gameplay"
