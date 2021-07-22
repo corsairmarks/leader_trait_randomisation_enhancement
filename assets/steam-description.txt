@@ -63,7 +63,7 @@ What this means to you is that this mod will need a compatibility patch to work 
 
 [h2]Changelog[/h2]
 
-See [url=]Change Notes[/url]
+See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2553806265]Change Notes[/url]
 
 [h2]Source Code[/h2]
 
