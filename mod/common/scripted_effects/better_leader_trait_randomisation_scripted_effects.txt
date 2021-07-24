@@ -849,7 +849,7 @@ add_random_governor_leader_trait = {
 				}
 			}
 			if = {
-				limit = { is_machine_empire = yes }
+				limit = { owner = { is_machine_empire = yes } }
 				add_trait = leader_trait_amplifier
 				set_timed_leader_flag = { flag = gained_leader_trait_amplifier days = 7 }
 			}
