@@ -1574,6 +1574,7 @@ ensure_appropriate_leader_traits = {
 	resolve_conflicting_leader_traits = yes
 	replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait = yes
 	add_ruler_generic_leader_traits_for_leaders_with_matching_regular_trait = yes
+	resolve_conflicting_leader_traits = yes # call a second time in case adding ruler traits created a conflict
 	convert_bureaucrat_leader_traits = yes
 }
 
@@ -2397,6 +2398,62 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 }
 
 # leader scope
+add_generic_leader_traits_for_leaders_with_matching_ruler_trait = {
+	if = {
+		limit = { NOT = { leader_class = ruler } }
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_adaptable
+				NOT = { has_trait = leader_trait_adaptable }
+			}
+			add_trait = leader_trait_adaptable
+		}
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_flexible_programming
+				NOT = { has_trait = leader_trait_flexible_programming }
+			}
+			add_trait = leader_trait_flexible_programming
+		}
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_stubborn
+				NOT = { has_trait = leader_trait_stubborn }
+			}
+			add_trait = leader_trait_stubborn
+		}
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_rigid_programming
+				NOT = { has_trait = leader_trait_rigid_programming }
+			}
+			add_trait = leader_trait_rigid_programming
+		}
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_resilient
+				NOT = { has_trait = leader_trait_resilient }
+			}
+			add_trait = leader_trait_resilient
+		}
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_substance_abuser
+				NOT = { has_trait = leader_trait_substance_abuser }
+			}
+			add_trait = leader_trait_substance_abuser
+		}
+		if = {
+			limit = {
+				has_ruler_trait = leader_trait_arrested_development
+				NOT = { has_trait = leader_trait_arrested_development }
+			}
+			add_trait = leader_trait_arrested_development
+		}
+	}
+}
+
+# leader scope
 add_ruler_generic_leader_traits_for_leaders_with_matching_regular_trait = {
 	if = {
 		limit = { NOT = { leader_class = ruler } }
@@ -2409,7 +2466,7 @@ add_ruler_generic_leader_traits_for_leaders_with_matching_regular_trait = {
 		}
 		if = {
 			limit = {
-				NOT = {has_ruler_trait = leader_trait_flexible_programming }
+				NOT = { has_ruler_trait = leader_trait_flexible_programming }
 				has_trait = leader_trait_flexible_programming
 			}
 			add_ruler_trait = leader_trait_flexible_programming

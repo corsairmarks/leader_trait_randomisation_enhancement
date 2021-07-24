@@ -7,6 +7,15 @@ on_leader_spawned = {
 	}
 }
 
+# fired when the ruler is ousted and goes back to their pre-ruler class
+# FROM = leader, previous ruler with their new class
+# THIS = country
+on_ruler_back_to_pre_ruler_class = {
+	events = {
+		better_leader_trait_randomization.51
+	}
+}
+
 # fired when a Special Project to apply a species modification template has completed
 # Note that this will trigger once for each combination of planet & original species
 # THIS = country

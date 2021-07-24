@@ -40,7 +40,7 @@ fleet_event = {
 	}
 }
 
-# fired by on_leader_spawned
+# fired by on_leader_spawned and on_ruler_back_to_pre_ruler_class (better_leader_trait_randomization.51, below)
 country_event = {
 	id = better_leader_trait_randomization.50
 	is_triggered_only = yes
@@ -53,6 +53,25 @@ country_event = {
 			# this does NOT fire the on_action because these leaders haven't changed, but we still want to check
 			# their species traits just in case they rolled trait(s) that don't follow the new rules
 			ensure_appropriate_leader_traits = yes
+		}
+	}
+}
+
+# fired by on_ruler_back_to_pre_ruler_class
+country_event = {
+	id = better_leader_trait_randomization.51
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = FROM
+	}
+	immediate = {
+		FROM = {
+			# because the leader was previously a ruler, we do actually want to keep their generic ruler traits
+			add_generic_leader_traits_for_leaders_with_matching_ruler_trait = yes
+		}
+		country_event = {
+			id = better_leader_trait_randomization.50
 		}
 	}
 }

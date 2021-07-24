@@ -59,6 +59,7 @@ What this means to you is that this mod will need a compatibility patch to work 
 ## Changelog
 
 * 1.0.0 Initial version
+* 1.0.1 Ensure leader traits are checked when returning to pre-ruler class
 
 ## Source Code
 
