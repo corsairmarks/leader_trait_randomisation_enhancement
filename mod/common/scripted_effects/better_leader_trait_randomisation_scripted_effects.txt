@@ -1579,6 +1579,28 @@ ensure_appropriate_leader_traits = {
 }
 
 # leader scope
+ensure_appropriate_leader_traits_demoted_ruler = {
+	if = {
+		limit = { is_robotic_species = no }
+		swap_leader_traits_machine_to_organic = yes
+	}
+	else_if = {
+		limit = { has_synthethic_dawn = yes }
+		swap_leader_traits_organic_to_machine = yes
+	}
+	remove_invalid_leader_traits = yes
+	set_timed_leader_flag = {
+		flag = suppress_generic_traits
+		days = 7
+	}
+	ensure_minimum_one_random_trait = yes
+	# because the leader was previously a ruler, we do actually want to keep their generic ruler traits
+	add_generic_leader_traits_for_leaders_with_matching_ruler_trait = yes
+	resolve_conflicting_leader_traits = yes
+	convert_bureaucrat_leader_traits = yes
+}
+
+# leader scope
 swap_leader_traits_organic_to_machine = {
 	if = {
 		limit = { has_synthethic_dawn = yes }

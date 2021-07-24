@@ -67,11 +67,13 @@ country_event = {
 	}
 	immediate = {
 		FROM = {
-			# because the leader was previously a ruler, we do actually want to keep their generic ruler traits
-			add_generic_leader_traits_for_leaders_with_matching_ruler_trait = yes
+			ensure_appropriate_leader_traits_demoted_ruler = yes
 		}
 		country_event = {
 			id = better_leader_trait_randomization.50
+			scopes = {
+				from = FROM
+			}
 		}
 	}
 }
