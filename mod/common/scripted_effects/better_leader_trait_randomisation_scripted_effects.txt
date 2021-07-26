@@ -8,41 +8,11 @@ add_random_leader_trait = {
 add_random_leader_trait_inner = {
 	switch = {
 		trigger = leader_class
-		scientist = {
-			add_random_scientist_leader_trait = yes
-			if = {
-				limit = { NOT = { has_leader_flag = suppress_trait_added_notification } }
-				owner = { country_event = { id = leader.21 } }
-			}
-		}
-		admiral = {
-			add_random_admiral_leader_trait = yes
-			if = {
-				limit = { NOT = { has_leader_flag = suppress_trait_added_notification } }
-				owner = { country_event = { id = leader.22 } }
-			}
-		}
-		governor = {
-			add_random_governor_leader_trait = yes
-			if = {
-				limit = { NOT = { has_leader_flag = suppress_trait_added_notification } }
-				owner = { country_event = { id = leader.23 } }
-			}
-		}
-		general = {
-			add_random_general_leader_trait = yes
-			if = {
-				limit = { NOT = { has_leader_flag = suppress_trait_added_notification } }
-				owner = { country_event = { id = leader.24 } }
-			}
-		}
-		ruler = {
-			add_random_ruler_leader_trait = yes
-			if = {
-				limit = { NOT = { has_leader_flag = suppress_trait_added_notification } }
-				owner = { country_event = { id = leader.25 } }
-			}
-		}
+		scientist = { add_random_scientist_leader_trait = yes }
+		admiral = { add_random_admiral_leader_trait = yes }
+		governor = { add_random_governor_leader_trait = yes }
+		general = { add_random_general_leader_trait = yes }
+		ruler = { add_random_ruler_leader_trait = yes }
 		# envoys don't have traits... yet
 	}
 }
@@ -2080,10 +2050,6 @@ ensure_minimum_one_random_trait = {
 				value = 7
 			}
 		}
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
-		}
 		while = {
 			limit = { num_traits < 7 }
 			add_random_leader_trait_inner = yes
@@ -2095,10 +2061,6 @@ ensure_minimum_one_random_trait = {
 				which = species_leader_trait_accumulator
 				value = 6
 			}
-		}
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
 		}
 		while = {
 			limit = { num_traits < 6 }
@@ -2112,10 +2074,6 @@ ensure_minimum_one_random_trait = {
 				value = 5
 			}
 		}
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
-		}
 		while = {
 			limit = { num_traits < 5 }
 			add_random_leader_trait_inner = yes
@@ -2127,10 +2085,6 @@ ensure_minimum_one_random_trait = {
 				which = species_leader_trait_accumulator
 				value = 4
 			}
-		}
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
 		}
 		while = {
 			limit = { num_traits < 4 }
@@ -2144,10 +2098,6 @@ ensure_minimum_one_random_trait = {
 				value = 3
 			}
 		}
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
-		}
 		while = {
 			limit = { num_traits < 3 }
 			add_random_leader_trait_inner = yes
@@ -2160,10 +2110,6 @@ ensure_minimum_one_random_trait = {
 				value = 2
 			}
 		}
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
-		}
 		while = {
 			limit = { num_traits < 2 }
 			add_random_leader_trait_inner = yes
@@ -2171,10 +2117,6 @@ ensure_minimum_one_random_trait = {
 	}
 	else_if = {
 		limit = { num_traits < 1 }
-		set_timed_leader_flag = {
-			flag = suppress_trait_added_notification
-			days = 7
-		}
 		add_random_leader_trait_inner = yes
 	}
 
@@ -2310,10 +2252,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 				NOT = { has_trait = leader_trait_adaptable }
 			}
 			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
-			}
-			set_timed_leader_flag = {
 				flag = suppress_generic_traits
 				days = 7
 			}
@@ -2324,10 +2262,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 			limit = {
 				has_ruler_trait = leader_trait_flexible_programming
 				NOT = { has_trait = leader_trait_flexible_programming }
-			}
-			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
 			}
 			set_timed_leader_flag = {
 				flag = suppress_generic_traits
@@ -2342,10 +2276,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 				NOT = { has_trait = leader_trait_stubborn }
 			}
 			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
-			}
-			set_timed_leader_flag = {
 				flag = suppress_generic_traits
 				days = 7
 			}
@@ -2356,10 +2286,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 			limit = {
 				has_ruler_trait = leader_trait_rigid_programming
 				NOT = { has_trait = leader_trait_rigid_programming }
-			}
-			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
 			}
 			set_timed_leader_flag = {
 				flag = suppress_generic_traits
@@ -2374,10 +2300,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 				NOT = { has_trait = leader_trait_resilient }
 			}
 			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
-			}
-			set_timed_leader_flag = {
 				flag = suppress_generic_traits
 				days = 7
 			}
@@ -2390,10 +2312,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 				NOT = { has_trait = leader_trait_substance_abuser }
 			}
 			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
-			}
-			set_timed_leader_flag = {
 				flag = suppress_generic_traits
 				days = 7
 			}
@@ -2404,10 +2322,6 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 			limit = {
 				has_ruler_trait = leader_trait_arrested_development
 				NOT = { has_trait = leader_trait_arrested_development }
-			}
-			set_timed_leader_flag = {
-				flag = suppress_trait_added_notification
-				days = 7
 			}
 			set_timed_leader_flag = {
 				flag = suppress_generic_traits
