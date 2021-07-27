@@ -26,7 +26,6 @@ The code in this mod polishes some of the code from the base game to work better
 * Leaders that have "ruler" generic traits (invisible until a leader becomes a ruler) have it/them removed and rerolled to another non-generic trait - together with the above point, this will help leaders always benefit from their generic traits when they are rulers (e.g. not losing Resilient and then dying)
 * Leaders with opposing traits, e.g. Adaptable and Stubborn, will have the negative trait removed (this mod should no longer roll them at all, so this fix is for any existing leaders you have)
 
-
 ## Compatibility
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
@@ -60,6 +59,10 @@ What this means to you is that this mod will need a compatibility patch to work 
 
 * 1.0.0 Initial version
 * 1.0.1 Ensure leader traits are checked when returning to pre-ruler class
+* 1.1.0 Minor new features
+    * A leader can gain a level-up trait once per leader class (assuming they somehow can switch classes - most commonly by becoming a Ruler), as opposed to once ever
+    * Maimed is now preserved as a Scientist -> Ruler trait (Paranoid and Traumatized were considered, but their effects are tailored for Scientists)
+    * Maimed is removed should a leader become robotic
 
 ## Source Code
 
