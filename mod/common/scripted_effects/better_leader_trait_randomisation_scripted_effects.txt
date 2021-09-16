@@ -1796,6 +1796,27 @@ remove_invalid_leader_traits = {
 			limit = { has_trait = leader_trait_restore_point }
 			remove_trait = leader_trait_restore_point
 		}
+		if = {
+			limit = {
+				species = { has_trait = trait_clone_soldier_infertile }
+				NOT = { has_trait = leader_trait_clone_army_admiral }
+			}
+			add_trait = leader_trait_clone_army_admiral
+		}
+		if = {
+			limit = {
+				species = { has_trait = trait_clone_soldier_infertile_full_potential }
+				NOT = { has_trait = leader_trait_clone_army_full_admiral }
+			}
+			add_trait = leader_trait_clone_army_full_admiral
+		}
+		if = {
+			limit = {
+				species = { has_trait = trait_clone_soldier_fertile }
+				NOT = { has_trait = leader_trait_clone_army_fertile_admiral }
+			}
+			add_trait = leader_trait_clone_army_fertile_admiral
+		}
 	}
 	else = {
 		if = {
@@ -1829,6 +1850,18 @@ remove_invalid_leader_traits = {
 		if = {
 			limit = { has_ruler_trait = leader_trait_maimed }
 			remove_ruler_trait = leader_trait_maimed
+		}
+		if = {
+			limit = { has_trait = leader_trait_clone_army_admiral }
+			remove_trait = leader_trait_clone_army_admiral
+		}
+		if = {
+			limit = { has_trait = leader_trait_clone_army_full_admiral }
+			remove_trait = leader_trait_clone_army_full_admiral
+		}
+		if = {
+			limit = { has_trait = leader_trait_clone_army_fertile_admiral }
+			remove_trait = leader_trait_clone_army_fertile_admiral
 		}
 		# only purge bio traits if they have syndaw installed - otherwise we'll just be leaving them with traitless leaders
 		if = {
