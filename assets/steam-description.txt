@@ -32,6 +32,8 @@ The code in this mod polishes some of the code from the base game to work better
 
 [h2]Compatibility[/h2]
 
+Built for Stellaris version 3.1.* "Lem."  Not compatible with achievements.
+
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event [b]leader.20[/b] that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect [b]add_random_leader_trait[/b] that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
 What all this means to you is that this mod will be widely compatible with other mods, as long as they do not also affect these two narrow areas.
