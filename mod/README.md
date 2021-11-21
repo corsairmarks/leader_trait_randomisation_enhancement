@@ -28,7 +28,7 @@ The code in this mod polishes some of the code from the base game to work better
 
 ## Compatibility
 
-Built for Stellaris version 3.1.\* "Lem."  Not compatible with achievements.
+Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
@@ -65,7 +65,8 @@ What this means to you is that this mod will need a compatibility patch to work 
     * A leader can gain a level-up trait once per leader class (assuming they somehow can switch classes - most commonly by becoming a Ruler), as opposed to once ever
     * Maimed is now preserved as a Scientist -> Ruler trait (Paranoid and Traumatized were considered, but their effects are tailored for Scientists)
     * Maimed is removed should a leader become robotic
-* 2.0.0 Update for compatibility with Stellaris 3.1.* "Lem" - add handling for Clone Army admiral traits
+* 2.0.0 Update for compatibility with Stellaris 3.1 "Lem" - add handling for Clone Army admiral traits
+* 2.1.0 Mark a compatible with Stellaris 3.2 "Herbert" - no script changes
 
 ## Source Code
 
