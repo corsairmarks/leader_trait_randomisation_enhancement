@@ -1,6 +1,6 @@
 # fired when a new leader is generated for an empire, to be available for recruitment
-# THIS = country
-# FROM = leader
+# this = country
+# from = leader
 on_leader_spawned = {
 	events = {
 		better_leader_trait_randomization.50
@@ -8,8 +8,8 @@ on_leader_spawned = {
 }
 
 # fired when the ruler is ousted and goes back to their pre-ruler class
-# FROM = leader, previous ruler with their new class
-# THIS = country
+# from = leader, previous ruler with their new class
+# this = country
 on_ruler_back_to_pre_ruler_class = {
 	events = {
 		better_leader_trait_randomization.51
@@ -18,19 +18,20 @@ on_ruler_back_to_pre_ruler_class = {
 
 # fired when a Special Project to apply a species modification template has completed
 # Note that this will trigger once for each combination of planet & original species
-# THIS = country
-# FROM = species (post-modification)
+# this = country
+# from = species (post-modification)
 on_modification_complete = {
 	events = {
 		better_leader_trait_randomization.60
 	}
 }
 
-# Fired when my custom code changes a leader's species.  You might attach an event
+# fired when my custom code changes a leader's species.  You might attach an event
 # here to handle custom traits in another mod that should be added or removed (or
 # converted) based on information about the leader (possibly taking in to account
 # things like their current owner).
-# THIS = leader (post-modification)
+# this = leader, post-modification
+# from = species, pre-modification (if known)
 on_leader_species_changed = {
 	events = {
 		better_leader_trait_randomization.70
@@ -38,7 +39,7 @@ on_leader_species_changed = {
 }
 
 # fired when my custom code changes a leader's owner
-# THIS = leader (post-owner change)
+# this = leader (post-owner change)
 on_leader_owner_changed = {
 	events = {
 		better_leader_trait_randomization.70
@@ -46,8 +47,8 @@ on_leader_owner_changed = {
 }
 
 # fired when a ship has surveyed a planet.
-# THIS = ship (science vessel)
-# FROM = planet
+# this = ship (science vessel)
+# from = planet
 on_survey = {
 	events = {
 		better_leader_trait_randomization.20
@@ -55,8 +56,8 @@ on_survey = {
 }
 
 # fired when ship is done surveying the last unsurveyed planet in a system
-# THIS = ship (science vessel)
-# FROM = system
+# this = ship (science vessel)
+# from = system
 on_system_survey_ship = {
 	events = {
 		better_leader_trait_randomization.20
@@ -64,8 +65,8 @@ on_system_survey_ship = {
 }
 
 # fired when a stage of an archeaology site is completed
-# THIS = fleet (science vessel)
-# FROM = archaeological site
+# this = fleet (science vessel)
+# from = archaeological site
 on_arch_stage_finished = {
 	events = {
 		better_leader_trait_randomization.21
@@ -73,8 +74,8 @@ on_arch_stage_finished = {
 }
 
 # fired when the final stage of an archeaology site is completed
-# THIS = fleet (science vessel)
-# FROM = archaeological site
+# this = fleet (science vessel)
+# from = archaeological site
 on_arch_site_finished = {
 	events = {
 		better_leader_trait_randomization.21
