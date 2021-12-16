@@ -30,6 +30,8 @@ The code in this mod polishes some of the code from the base game to work better
 [*]Leaders with opposing traits, e.g. Adaptable and Stubborn, will have the negative trait removed (this mod should no longer roll them at all, so this fix is for any existing leaders you have)
 [/list]
 
+Optional feature (defaults to disabled): Leaders will have a higher chance to gain traits related to their current role.  This feature is experimental and only applies to scientists at present.  Enable or disable by running this command on the console: [b]event better_leader_trait_randomization.3[/b].  Check the status with [b]trigger is_leader_trait_role_weight_enabled = yes[/b] (showing a green checkmark indicates the feature is enabled, a red x is disabled).
+
 [h2]Compatibility[/h2]
 
 Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.

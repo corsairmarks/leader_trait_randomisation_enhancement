@@ -26,6 +26,8 @@ The code in this mod polishes some of the code from the base game to work better
 * Leaders that have "ruler" generic traits (invisible until a leader becomes a ruler) have it/them removed and rerolled to another non-generic trait - together with the above point, this will help leaders always benefit from their generic traits when they are rulers (e.g. not losing Resilient and then dying)
 * Leaders with opposing traits, e.g. Adaptable and Stubborn, will have the negative trait removed (this mod should no longer roll them at all, so this fix is for any existing leaders you have)
 
+Optional feature (defaults to disabled): Leaders will have a higher chance to gain traits related to their current role.  This feature is experimental and only applies to scientists at present.  Enable or disable by running this command on the console: `event better_leader_trait_randomization.3`.  Check the status with `trigger is_leader_trait_role_weight_enabled = yes` (showing a green checkmark indicates the feature is enabled, a red x is disabled).
+
 ## Compatibility
 
 Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
@@ -67,6 +69,7 @@ What this means to you is that this mod will need a compatibility patch to work 
     * Maimed is removed should a leader become robotic
 * 2.0.0 Update for compatibility with Stellaris 3.1 "Lem" - add handling for Clone Army admiral traits
 * 2.1.0 Mark a compatible with Stellaris 3.2 "Herbert" - no script changes
+* 2.2.0 Add optional leader weighting based on their leadership role at time of level-up
 
 ## Source Code
 
