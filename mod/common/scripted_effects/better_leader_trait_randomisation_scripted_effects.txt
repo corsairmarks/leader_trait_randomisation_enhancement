@@ -1,3 +1,6 @@
+@role_weight_increase = 5
+@role_weight_decrease = 0.5
+
 # leader scope - this is the overridden effect from base Stellaris
 add_random_leader_trait = {
 	add_random_leader_trait_inner = yes
@@ -97,6 +100,11 @@ add_random_scientist_leader_trait = {
 		# begin scientist traits
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_scientist_surveying = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_meticulous
 			}
@@ -105,6 +113,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				OR = {
+					is_scientist_assisting_research = yes
+					is_scientist_researching = yes
+				}
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_spark_of_genius
@@ -115,6 +131,19 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_scientist_researching_poi = yes
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				OR = {
+					is_scientist_assisting_research = yes
+					is_scientist_researching = yes
+				}
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_carefree 
 			}
@@ -123,6 +152,19 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_scientist_surveying = yes
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				OR = {
+					is_scientist_assisting_research = yes
+					is_scientist_researching = yes
+				}
+			}
 			modifier = {
 				factor = 0
 				OR = {
@@ -148,6 +190,19 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_scientist_excavating = yes
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				OR = {
+					is_scientist_assisting_research = yes
+					is_scientist_researching = yes
+				}
+			}
+			modifier = {
 				factor = 0
 				OR = {
 					has_trait = leader_trait_archaeologist
@@ -166,6 +221,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				OR = {
+					is_scientist_assisting_research = yes
+					is_scientist_researching = yes
+				}
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_maniacal
@@ -203,6 +266,22 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_materials
 			}
@@ -211,6 +290,22 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_propulsion
@@ -221,6 +316,22 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_voidcraft
 			}
@@ -229,6 +340,22 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_industry
@@ -239,6 +366,22 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_field_manipulation
 			}
@@ -247,6 +390,22 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_particles
@@ -257,6 +416,22 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_computing
 			}
@@ -265,6 +440,22 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_psionics
@@ -277,6 +468,22 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_new_worlds
 			}
@@ -285,6 +492,22 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_statecraft
@@ -295,6 +518,22 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
+			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_biology
 			}
@@ -303,6 +542,22 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = society
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				is_researching_area = physics
+				is_researching_area = engineering
+			}
+			modifier = {
+				factor = @role_weight_decrease
+				is_leader_trait_role_weight_enabled = yes
+				has_scientist_expertise = yes
+			}
 			modifier = {
 				factor = 0
 				has_trait = leader_trait_expertise_military_theory

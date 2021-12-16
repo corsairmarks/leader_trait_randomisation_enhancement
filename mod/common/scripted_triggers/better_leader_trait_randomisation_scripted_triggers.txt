@@ -193,3 +193,8 @@ is_leader_chosen = {
 		has_trait = leader_trait_general_chosen
 	}
 }
+
+# any
+is_leader_trait_role_weight_enabled = {
+	has_global_flag = feature_leader_trait_role_weight_enabled
+}

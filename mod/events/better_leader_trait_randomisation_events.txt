@@ -1,5 +1,21 @@
 namespace = better_leader_trait_randomization
 
+# toggle role-based weighting
+event = {
+	id = better_leader_trait_randomization.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { is_leader_trait_role_weight_enabled = yes }
+			remove_global_flag = feature_leader_trait_role_weight_enabled
+		}
+		else = {
+			set_global_flag = feature_leader_trait_role_weight_enabled
+		}
+	}
+}
+
 # marks the science ship's leader as having recently conducted a survey
 ship_event = {
 	id = better_leader_trait_randomization.20
