@@ -70,6 +70,7 @@ What this means to you is that this mod will need a compatibility patch to work 
 * 2.0.0 Update for compatibility with Stellaris 3.1 "Lem" - add handling for Clone Army admiral traits
 * 2.1.0 Mark a compatible with Stellaris 3.2 "Herbert" - no script changes
 * 2.2.0 Add optional leader weighting based on their leadership role at time of level-up
+* 2.2.1 Fix bug with Clone Soldier handling - was improperly adding the trait when it should have been removed instead
 
 ## Source Code
 
