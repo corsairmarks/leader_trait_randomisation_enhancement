@@ -2051,27 +2051,6 @@ remove_invalid_leader_traits = {
 			limit = { has_trait = leader_trait_restore_point }
 			remove_trait = leader_trait_restore_point
 		}
-		if = {
-			limit = {
-				species = { has_trait = trait_clone_soldier_infertile }
-				NOT = { has_trait = leader_trait_clone_army_admiral }
-			}
-			add_trait = leader_trait_clone_army_admiral
-		}
-		if = {
-			limit = {
-				species = { has_trait = trait_clone_soldier_infertile_full_potential }
-				NOT = { has_trait = leader_trait_clone_army_full_admiral }
-			}
-			add_trait = leader_trait_clone_army_full_admiral
-		}
-		if = {
-			limit = {
-				species = { has_trait = trait_clone_soldier_fertile }
-				NOT = { has_trait = leader_trait_clone_army_fertile_admiral }
-			}
-			add_trait = leader_trait_clone_army_fertile_admiral
-		}
 	}
 	else = {
 		if = {
@@ -2177,6 +2156,32 @@ remove_invalid_leader_traits = {
 				limit = { has_trait = leader_trait_roamer }
 				remove_trait = leader_trait_roamer
 			}
+		}
+	}
+
+	# only admirals from clone species can have the clone soldier leader trait
+	if = {
+		limit = { leader_class = admiral }
+		if = {
+			limit = {
+				species = { NOT = { has_trait = trait_clone_soldier_infertile } }
+				has_trait = leader_trait_clone_army_admiral
+			}
+			remove_trait = leader_trait_clone_army_admiral
+		}
+		if = {
+			limit = {
+				species = { NOT = { has_trait = trait_clone_soldier_infertile_full_potential } }
+				has_trait = leader_trait_clone_army_full_admiral
+			}
+			remove_trait = leader_trait_clone_army_full_admiral
+		}
+		if = {
+			limit = {
+				species = { NOT = { has_trait = trait_clone_soldier_fertile } }
+				has_trait = leader_trait_clone_army_fertile_admiral
+			}
+			remove_trait = leader_trait_clone_army_fertile_admiral
 		}
 	}
 
