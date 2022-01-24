@@ -266,6 +266,14 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = society
+				}
+			}
+			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
 				is_researching_area = engineering
@@ -290,6 +298,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = society
+				}
+			}
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
@@ -316,6 +332,14 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = society
+				}
+			}
+			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
 				is_researching_area = engineering
@@ -340,6 +364,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = society
+				}
+			}
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
@@ -366,6 +398,14 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = society
+					is_researching_area = engineering
+				}
+			}
+			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
 				is_researching_area = physics
@@ -390,6 +430,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = society
+					is_researching_area = engineering
+				}
+			}
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
@@ -416,6 +464,14 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = society
+					is_researching_area = engineering
+				}
+			}
+			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
 				is_researching_area = physics
@@ -440,6 +496,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = engineering
+				}
+			}
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
@@ -468,6 +532,14 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = engineering
+				}
+			}
+			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
 				is_researching_area = society
@@ -492,6 +564,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = engineering
+				}
+			}
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
@@ -518,6 +598,14 @@ add_random_scientist_leader_trait = {
 		}
 		5 = {
 			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = engineering
+				}
+			}
+			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
 				is_researching_area = society
@@ -542,6 +630,14 @@ add_random_scientist_leader_trait = {
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
 		}
 		5 = {
+			modifier = {
+				factor = 0
+				is_leader_trait_role_weight_enabled = no
+				NOR = {
+					is_researching_area = physics
+					is_researching_area = engineering
+				}
+			}
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
