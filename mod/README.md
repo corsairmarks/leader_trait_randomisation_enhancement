@@ -30,7 +30,7 @@ Optional feature (defaults to disabled): Leaders will have a higher chance to ga
 
 ## Compatibility
 
-Built for Stellaris version 3.2.\* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3.\* "Libra."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
@@ -71,6 +71,7 @@ What this means to you is that this mod will need a compatibility patch to work 
 * 2.1.0 Mark a compatible with Stellaris 3.2 "Herbert" - no script changes
 * 2.2.0 Add optional leader weighting based on their leadership role at time of level-up
 * 2.2.1 Fix bug with Clone Soldier handling - was improperly adding the trait when it should have been removed instead
+* 3.0.0 Update for Stellaris version 3.3.0 "Libra" - integrate underlying changes from the base game
 
 ## Source Code
 

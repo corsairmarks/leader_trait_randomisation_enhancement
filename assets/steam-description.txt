@@ -1,11 +1,9 @@
 [h1]Overview[/h1]
-
 Frustrated that some leader traits can't be gained on level-up?  Or maybe you'd like your robotic/synthetic leaders to use the machine-specific traits too?  Then this mod is for you!
 
 The code in this mod polishes some of the code from the base game to work better and offer options that may have been forgotten when new traits were added or systems were redesigned.
 
 [h1]Changes[/h1]
-
 [list]
 [*]Removes restriction on scientists in research roles not gaining traits
 [*]Removes invalid/inappropriate/already-extant traits from the pool when rolling
@@ -29,48 +27,37 @@ The code in this mod polishes some of the code from the base game to work better
 [*]Leaders that have "ruler" generic traits (invisible until a leader becomes a ruler) have it/them removed and rerolled to another non-generic trait - together with the above point, this will help leaders always benefit from their generic traits when they are rulers (e.g. not losing Resilient and then dying)
 [*]Leaders with opposing traits, e.g. Adaptable and Stubborn, will have the negative trait removed (this mod should no longer roll them at all, so this fix is for any existing leaders you have)
 [/list]
-
 Optional feature (defaults to disabled): Leaders will have a higher chance to gain traits related to their current role.  This feature is experimental and only applies to scientists at present.  Enable or disable by running this command on the console: [b]event better_leader_trait_randomization.3[/b].  Check the status with [b]trigger is_leader_trait_role_weight_enabled = yes[/b] (showing a green checkmark indicates the feature is enabled, a red x is disabled).
 
 [h2]Compatibility[/h2]
-
-Built for Stellaris version 3.2.* "Herbert."  Not compatible with achievements.
+Built for Stellaris version 3.3.* "Libra."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event [b]leader.20[/b] that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect [b]add_random_leader_trait[/b] that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
 What all this means to you is that this mod will be widely compatible with other mods, as long as they do not also affect these two narrow areas.
 
 [h3]Recommended Companion Mods[/h3]
-
 Like leaders?  Try a couple of my other leader-related mods that work with this one.
-
 [list]
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499031295]Leader Traits: All Eligible Species Traits[/url] will ensure your leaders get all their species-based traits when being assimilated (such as Psionic or Erudite)
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2498166286]Leader Traits: Scientist AI Assistant Upgrader[/url] will help your scientists upgrade to "Sapient AI Assistants" from "Custom AI Assistants" when you discover the right technology
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives
 [/list]
-
 [h3]When to Install[/h3]
-
 This mod can be safely added to or removed from your savegame after the game has started. It is implemented through events, effects, and triggers without adding or removing gameplay objects. If you remove it, you will keep any leaders and their existing traits, but further leaders and leader level-ups will use the default code. Back up your savegame before trying to remove a mod.
 
 [h2]Known Issues[/h2]
-
 This mod overwrites one effect and preempts one event from the base game.  Expect to see two lines in error.log like this:
-
 [code]
 [20:47:35][game_singleobjectdatabase.h:147]: Object with key: add_random_leader_trait already exists
 [20:47:35][eventmanager.cpp:355]: an event with id [leader.20] already exists!  file: events/leader_events_1.txt line: 950
 [/code]
-
 What this means to you is that this mod will need a compatibility patch to work with other mods that alter the same base Stellaris content.
 
 [h2]Changelog[/h2]
-
 See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2553806265]Change Notes[/url]
 
 [h2]Source Code[/h2]
-
 Hosted on [url=https://github.com/corsairmarks/leader_trait_randomisation_enhancement]GitHub[/url]
 
 [url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
