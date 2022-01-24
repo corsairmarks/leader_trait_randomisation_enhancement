@@ -1,7 +1,7 @@
 namespace = leader
 
-@level_small_factor = 3
-@level_medium_factor = 4
+@level_small_medium_cutoff = 3
+@level_medium_large_cutoff = 4
 
 @small_trait_factor = 1.5
 @medium_trait_factor = 2.5
@@ -55,15 +55,15 @@ country_event = {
 					}
 					modifier = {
 						factor = @small_trait_factor
-						has_level = @level_small_factor
+						has_level = @level_small_medium_cutoff
 					}
 					modifier = {
 						factor = @medium_trait_factor
-						has_level = @level_medium_factor
+						has_level = @level_medium_large_cutoff
 					}						
 					modifier = {
 						factor = @large_trait_factor
-						has_level > @level_medium_factor
+						has_level > @level_medium_large_cutoff
 					}
 					switch = {
 						trigger = leader_class
