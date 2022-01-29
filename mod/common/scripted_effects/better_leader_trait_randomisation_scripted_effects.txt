@@ -1,11 +1,6 @@
 @role_weight_increase = 5
 @role_weight_decrease = 0.5
 
-# leader scope - this is the overridden effect from base Stellaris
-add_random_leader_trait = {
-	add_random_leader_trait_inner = yes
-}
-
 # separate effect so that compat patches can just call this one if they also want to override add_random_leader_trait
 # leader scope
 add_random_leader_trait_inner = {
