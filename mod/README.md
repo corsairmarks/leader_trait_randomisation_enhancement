@@ -30,7 +30,7 @@ Optional feature (defaults to disabled): Leaders will have a higher chance to ga
 
 ## Compatibility
 
-Built for Stellaris version 3.3.\* "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
@@ -53,8 +53,8 @@ This mod can be safely added to or removed from your savegame after the game has
 This mod overwrites one effect and preempts one event from the base game.  Expect to see two lines in error.log like this:
 
 ```
-[20:47:35][game_singleobjectdatabase.h:147]: Object with key: add_random_leader_trait already exists
-[20:47:35][eventmanager.cpp:355]: an event with id [leader.20] already exists!  file: events/leader_events_1.txt line: 950
+[15:38:58][game_singleobjectdatabase.h:147]: Object with key: add_random_leader_trait already exists, using the one at  file: common/scripted_effects/better_leader_trait_randomisation_scripted_effect_overrides.txt line: 2
+[15:38:59][eventmanager.cpp:361]: an event with id [leader.20] already exists!  file: events/leader_events_1.txt line: 950
 ```
 
 What this means to you is that this mod will need a compatibility patch to work with other mods that alter the same base Stellaris content.
