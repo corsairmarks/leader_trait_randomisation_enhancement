@@ -29,7 +29,7 @@ The code in this mod polishes some of the code from the base game to work better
 Optional feature (defaults to disabled): Leaders will have a higher chance to gain traits related to their current role.  This feature is experimental and only applies to scientists at present.  Enable or disable by running this command on the console: [b]event better_leader_trait_randomization.3[/b].  Check the status with [b]trigger is_leader_trait_role_weight_enabled = yes[/b] (showing a green checkmark indicates the feature is enabled, a red x is disabled).
 
 [h2]Compatibility[/h2]
-Built for Stellaris version 3.3 "Libra."  Not compatible with achievements.
+Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event [b]leader.20[/b] that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect [b]add_random_leader_trait[/b] that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
