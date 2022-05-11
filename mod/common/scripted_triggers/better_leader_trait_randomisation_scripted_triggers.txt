@@ -1,5 +1,6 @@
 # leader
 has_xp_bonus_leader_trait = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_adaptable
 		has_trait = leader_trait_flexible_programming
@@ -8,6 +9,7 @@ has_xp_bonus_leader_trait = {
 
 # leader
 has_xp_penalty_leader_trait = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_stubborn
 		has_trait = leader_trait_rigid_programming
@@ -16,6 +18,7 @@ has_xp_penalty_leader_trait = {
 
 # leader that is a scientist
 is_scientist_surveying = {
+	optimize_memory
 	exists = fleet
 	OR = {
 		fleet = {
@@ -31,6 +34,7 @@ is_scientist_surveying = {
 
 # leader that is a scientist
 is_scientist_researching_poi = {
+	optimize_memory
 	exists = fleet
 	OR = {
 		fleet = {
@@ -46,6 +50,7 @@ is_scientist_researching_poi = {
 
 # leader that is a scientist
 is_scientist_excavating = {
+	optimize_memory
 	exists = fleet
 	OR = {
 		fleet = { has_fleet_order = excavate_archaeological_site_fleet_order }
@@ -55,12 +60,14 @@ is_scientist_excavating = {
 
 # leader that is a scientist
 is_scientist_assisting_research = {
+	optimize_memory
 	exists = fleet
 	fleet = { has_fleet_order = assist_research_order }
 }
 
 # leader that is a scientist
 is_scientist_researching = {
+	optimize_memory
 	OR = {
 		is_researching_area = physics
 		is_researching_area = society
@@ -70,6 +77,7 @@ is_scientist_researching = {
 
 # leader that is a scientist
 has_scientist_expertise = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_expertise_field_manipulation
 		has_trait = leader_trait_expertise_particles
@@ -88,6 +96,7 @@ has_scientist_expertise = {
 
 # leader that is a scientist
 has_scientist_physics_expertise = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_expertise_field_manipulation
 		has_trait = leader_trait_expertise_particles
@@ -97,6 +106,7 @@ has_scientist_physics_expertise = {
 
 # leader that is a scientist
 has_scientist_society_expertise = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_expertise_psionics
 		has_trait = leader_trait_expertise_new_worlds
@@ -108,6 +118,7 @@ has_scientist_society_expertise = {
 
 # leader that is a scientist
 has_scientist_engineering_expertise = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_expertise_materials
 		has_trait = leader_trait_expertise_propulsion
@@ -119,6 +130,7 @@ has_scientist_engineering_expertise = {
 # leader
 # $TRAIT_SUFFIX$ - one of: brainslug, erudite, psionic, cyborg, synthetic, chosen
 is_leader_special_trait = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_$TRAIT_SUFFIX$
 		has_trait = leader_trait_governor_$TRAIT_SUFFIX$
@@ -130,6 +142,7 @@ is_leader_special_trait = {
 
 # leader
 is_leader_brainslugged = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_brainslug
 		has_trait = leader_trait_governor_brainslug
@@ -141,6 +154,7 @@ is_leader_brainslugged = {
 
 # leader
 is_leader_erudite = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_erudite
 		has_trait = leader_trait_governor_erudite
@@ -152,6 +166,7 @@ is_leader_erudite = {
 
 # leader
 is_leader_cyborg = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_cyborg
 		has_trait = leader_trait_governor_cyborg
@@ -163,6 +178,7 @@ is_leader_cyborg = {
 
 # leader
 is_leader_synthetic = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_synthetic
 		has_trait = leader_trait_governor_synthetic
@@ -174,6 +190,7 @@ is_leader_synthetic = {
 
 # leader
 is_leader_psionic = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_psionic
 		has_trait = leader_trait_governor_psionic
@@ -185,6 +202,7 @@ is_leader_psionic = {
 
 # leader
 is_leader_chosen = {
+	optimize_memory
 	OR = {
 		has_trait = leader_trait_ruler_chosen
 		has_trait = leader_trait_governor_chosen
@@ -196,5 +214,6 @@ is_leader_chosen = {
 
 # any
 is_leader_trait_role_weight_enabled = {
+	optimize_memory
 	has_global_flag = feature_leader_trait_role_weight_enabled
 }

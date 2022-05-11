@@ -1,4 +1,5 @@
 # leader scope - this is the overridden effect from base Stellaris
 add_random_leader_trait = {
+	optimize_memory
 	add_random_leader_trait_inner = yes
 }

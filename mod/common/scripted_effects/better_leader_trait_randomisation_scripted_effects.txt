@@ -4,6 +4,7 @@
 # separate effect so that compat patches can just call this one if they also want to override add_random_leader_trait
 # leader scope
 add_random_leader_trait_inner = {
+	optimize_memory
 	switch = {
 		trigger = leader_class
 		scientist = { add_random_scientist_leader_trait = yes }
@@ -17,6 +18,7 @@ add_random_leader_trait_inner = {
 
 # leader scope
 add_random_scientist_leader_trait = {
+	optimize_memory
 	random_list = {
 		# generic leader traits; NOTE: eager/newboot is purposely excluded, even in the built-in effect
 		5 = {
@@ -627,6 +629,7 @@ add_random_scientist_leader_trait = {
 
 # leader scope
 add_random_admiral_leader_trait = {
+	optimize_memory
 	random_list = {
 		# generic leader traits; NOTE: eager/newboot is purposely excluded, even in the built-in effect
 		5 = {
@@ -845,6 +848,7 @@ add_random_admiral_leader_trait = {
 
 # leader scope
 add_random_governor_leader_trait = {
+	optimize_memory
 	random_list = {
 		# generic leader traits; NOTE: eager/newboot is purposely excluded, even in the built-in effect
 		5 = {
@@ -1137,6 +1141,7 @@ add_random_governor_leader_trait = {
 
 # leader scope
 add_random_general_leader_trait = {
+	optimize_memory
 	random_list = {
 		# generic leader traits; NOTE: eager/newboot is purposely excluded, even in the built-in effect
 		5 = {
@@ -1340,6 +1345,7 @@ add_random_general_leader_trait = {
 
 # leader scope
 add_random_ruler_leader_trait = {
+	optimize_memory
 	random_list = {
 		# generic leader traits; NOTE: eager/newboot is purposely excluded, even in the built-in effect
 		5 = {
@@ -1775,6 +1781,7 @@ add_random_ruler_leader_trait = {
 
 # leader scope
 add_xp_bonus_leader_trait = {
+	optimize_memory
 	if = {
 		limit = {
 			OR = {
@@ -1802,6 +1809,7 @@ add_xp_bonus_leader_trait = {
 
 # leader scope
 add_xp_penalty_leader_trait = {
+	optimize_memory
 	if = {
 		limit = {
 			OR = {
@@ -1829,6 +1837,7 @@ add_xp_penalty_leader_trait = {
 
 # leader scope
 ensure_appropriate_leader_traits = {
+	optimize_memory
 	if = {
 		limit = { is_robotic_species = no }
 		swap_leader_traits_machine_to_organic = yes
@@ -1848,6 +1857,7 @@ ensure_appropriate_leader_traits = {
 
 # leader scope
 ensure_appropriate_leader_traits_demoted_ruler = {
+	optimize_memory
 	if = {
 		limit = { is_robotic_species = no }
 		swap_leader_traits_machine_to_organic = yes
@@ -1870,6 +1880,7 @@ ensure_appropriate_leader_traits_demoted_ruler = {
 
 # leader scope
 swap_leader_traits_organic_to_machine = {
+	optimize_memory
 	if = {
 		limit = { has_synthethic_dawn = yes }
 		if = {
@@ -1947,6 +1958,7 @@ swap_leader_traits_organic_to_machine = {
 
 # leader scope
 swap_leader_traits_machine_to_organic = {
+	optimize_memory
 	if = {
 		limit = { has_trait = leader_trait_flexible_programming }
 		remove_trait = leader_trait_flexible_programming
@@ -2021,6 +2033,7 @@ swap_leader_traits_machine_to_organic = {
 
 # leader scope - run after species change and after any trait conversion
 remove_invalid_leader_traits = {
+	optimize_memory
 	# if you got one that your tech doesn't allow, you can keep it
 	# this is just concerned with removing archetype-type inappropriate traits
 	if = {
@@ -2375,6 +2388,7 @@ remove_invalid_leader_traits = {
 
 # leader scope
 ensure_minimum_one_random_trait = {
+	optimize_memory
 	set_variable = {
 		which = species_leader_trait_accumulator
 		value = 1
@@ -2505,6 +2519,7 @@ ensure_minimum_one_random_trait = {
 
 # leader scope
 resolve_conflicting_leader_traits = {
+	optimize_memory
 	# organic/universal traits
 	if = {
 		limit = {
@@ -2624,6 +2639,7 @@ resolve_conflicting_leader_traits = {
 
 # leader scope
 replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait = {
+	optimize_memory
 	if = {
 		limit = { NOT = { leader_class = ruler } }
 		if = {
@@ -2715,6 +2731,7 @@ replace_ruler_generic_leader_traits_for_leaders_without_matching_regular_trait =
 
 # leader scope
 add_generic_leader_traits_for_leaders_with_matching_ruler_trait = {
+	optimize_memory
 	if = {
 		limit = { NOT = { leader_class = ruler } }
 		if = {
@@ -2778,6 +2795,7 @@ add_generic_leader_traits_for_leaders_with_matching_ruler_trait = {
 
 # leader scope
 add_ruler_generic_leader_traits_for_leaders_with_matching_regular_trait = {
+	optimize_memory
 	if = {
 		limit = { NOT = { leader_class = ruler } }
 		if = {
@@ -2841,6 +2859,7 @@ add_ruler_generic_leader_traits_for_leaders_with_matching_regular_trait = {
 
 # leader scope
 convert_bureaucrat_leader_traits = {
+	optimize_memory
 	if = {
 		limit = {
 			has_trait = leader_trait_amplifier
