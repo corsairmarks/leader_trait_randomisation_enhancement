@@ -158,7 +158,7 @@ add_random_scientist_leader_trait = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = leader_trait_carefree 
+				has_trait = leader_trait_carefree
 			}
 			add_trait = leader_trait_carefree
 			set_timed_leader_flag = { flag = gained_leader_trait_carefree days = 7 }
@@ -1299,7 +1299,7 @@ add_random_general_leader_trait = {
 			add_trait = leader_trait_glory_seeker
 			set_timed_leader_flag = { flag = gained_leader_trait_glory_seeker days = 7 }
 			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
-			
+
 		}
 		5 = {
 			modifier = {
@@ -2457,85 +2457,30 @@ ensure_minimum_one_random_trait = {
 		}
 	}
 
-	# if we ever get the ability to export triggers or compare them to variables, this can be simplified
+	export_trigger_value_to_variable = {
+		trigger = num_traits
+		variable = num_leader_traits
+	}
+
 	if = {
 		limit = {
 			check_variable = {
 				which = species_leader_trait_accumulator
-				value = 7
+				value > num_leader_traits
 			}
 		}
-		while = {
-			limit = { num_traits < 7 }
-			add_random_leader_trait_inner = yes
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = species_leader_trait_accumulator
-				value = 6
-			}
+		subtract_variable = {
+			which = species_leader_trait_accumulator
+			value = num_leader_traits
 		}
 		while = {
-			limit = { num_traits < 6 }
+			count = species_leader_trait_accumulator
 			add_random_leader_trait_inner = yes
 		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = species_leader_trait_accumulator
-				value = 5
-			}
-		}
-		while = {
-			limit = { num_traits < 5 }
-			add_random_leader_trait_inner = yes
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = species_leader_trait_accumulator
-				value = 4
-			}
-		}
-		while = {
-			limit = { num_traits < 4 }
-			add_random_leader_trait_inner = yes
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = species_leader_trait_accumulator
-				value = 3
-			}
-		}
-		while = {
-			limit = { num_traits < 3 }
-			add_random_leader_trait_inner = yes
-		}
-	}
-	else_if = {
-		limit = {
-			check_variable = {
-				which = species_leader_trait_accumulator
-				value = 2
-			}
-		}
-		while = {
-			limit = { num_traits < 2 }
-			add_random_leader_trait_inner = yes
-		}
-	}
-	else_if = {
-		limit = { num_traits < 1 }
-		add_random_leader_trait_inner = yes
 	}
 
 	clear_variable = species_leader_trait_accumulator
+	clear_variable = num_leader_traits
 }
 
 # leader scope
