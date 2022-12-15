@@ -53,7 +53,7 @@ is_scientist_researching_poi = {
 				has_fleet_order = research_discovery_order # unspecified
 			}
 		}
-		has_leader_flag = was_recently_researching_poi # TODO: can trigger this now with an on_action
+		has_leader_flag = was_recently_researching_poi
 	}
 }
 
