@@ -98,6 +98,23 @@ add_random_scientist_leader_trait = {
 			modifier = {
 				factor = @role_weight_increase
 				is_leader_trait_role_weight_enabled = yes
+				OR = {
+					is_scientist_surveying = yes
+					is_scientist_excavating = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = leader_trait_mindful
+			}
+			add_trait = leader_trait_mindful
+			set_timed_leader_flag = { flag = gained_leader_trait_mindful days = 7 }
+			set_timed_leader_flag = { flag = has_gained_trait days = 7 }
+		}
+		5 = {
+			modifier = {
+				factor = @role_weight_increase
+				is_leader_trait_role_weight_enabled = yes
 				is_scientist_surveying = yes
 			}
 			modifier = {
