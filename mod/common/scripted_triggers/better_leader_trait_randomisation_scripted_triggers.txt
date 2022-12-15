@@ -44,7 +44,7 @@ is_scientist_researching_poi = {
 				has_fleet_order = research_discovery_order # unspecified
 			}
 		}
-		has_leader_flag = was_recently_researching_poi
+		has_leader_flag = was_recently_researching_poi # TODO: can trigger this now with an on_action
 	}
 }
 
@@ -143,72 +143,48 @@ is_leader_special_trait = {
 # leader
 is_leader_brainslugged = {
 	optimize_memory
-	OR = {
-		has_trait = leader_trait_ruler_brainslug
-		has_trait = leader_trait_governor_brainslug
-		has_trait = leader_trait_scientist_brainslug
-		has_trait = leader_trait_admiral_brainslug
-		has_trait = leader_trait_general_brainslug
-	}
+	is_leader_special_trait = { TRAIT_SUFFIX = brainslug }
 }
 
 # leader
 is_leader_erudite = {
 	optimize_memory
-	OR = {
-		has_trait = leader_trait_ruler_erudite
-		has_trait = leader_trait_governor_erudite
-		has_trait = leader_trait_scientist_erudite
-		has_trait = leader_trait_admiral_erudite
-		has_trait = leader_trait_general_erudite
-	}
+	is_leader_special_trait = { TRAIT_SUFFIX = erudite }
 }
 
 # leader
 is_leader_cyborg = {
 	optimize_memory
-	OR = {
-		has_trait = leader_trait_ruler_cyborg
-		has_trait = leader_trait_governor_cyborg
-		has_trait = leader_trait_scientist_cyborg
-		has_trait = leader_trait_admiral_cyborg
-		has_trait = leader_trait_general_cyborg
-	}
+	is_leader_special_trait = { TRAIT_SUFFIX = cyborg }
 }
 
 # leader
 is_leader_synthetic = {
 	optimize_memory
-	OR = {
-		has_trait = leader_trait_ruler_synthetic
-		has_trait = leader_trait_governor_synthetic
-		has_trait = leader_trait_scientist_synthetic
-		has_trait = leader_trait_admiral_synthetic
-		has_trait = leader_trait_general_synthetic
-	}
+	is_leader_special_trait = { TRAIT_SUFFIX = synthetic }
 }
 
 # leader
 is_leader_psionic = {
 	optimize_memory
-	OR = {
-		has_trait = leader_trait_ruler_psionic
-		has_trait = leader_trait_governor_psionic
-		has_trait = leader_trait_scientist_psionic
-		has_trait = leader_trait_admiral_psionic
-		has_trait = leader_trait_general_psionic
-	}
+	is_leader_special_trait = { TRAIT_SUFFIX = psionic }
 }
 
 # leader
 is_leader_chosen = {
 	optimize_memory
+	is_leader_special_trait = { TRAIT_SUFFIX = chosen }
+}
+
+# leader
+is_leader_chosen_by_covenant = {
+	optimize_memory
 	OR = {
-		has_trait = leader_trait_ruler_chosen
-		has_trait = leader_trait_governor_chosen
-		has_trait = leader_trait_scientist_chosen
-		has_trait = leader_trait_admiral_chosen
-		has_trait = leader_trait_general_chosen
+		has_trait = leader_trait_ruler_composer_chosen
+		has_trait = leader_trait_ruler_eater_chosen
+		has_trait = leader_trait_ruler_instrument_chosen
+		has_trait = leader_trait_ruler_whisperers_chosen
+		has_chosen_covenant_trait_non_ruler = yes
 	}
 }
 

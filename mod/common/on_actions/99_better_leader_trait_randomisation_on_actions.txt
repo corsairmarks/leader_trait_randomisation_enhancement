@@ -81,3 +81,13 @@ on_arch_site_finished = {
 		better_leader_trait_randomization.21
 	}
 }
+
+# fired when a science ship successfully analyzed or scavenged debris
+# this = country
+# from = debris
+# fromfrom = controller of destroyed ship
+on_debris_scavenged_and_researched = {
+	events = {
+		better_leader_trait_randomization.22
+	}
+}

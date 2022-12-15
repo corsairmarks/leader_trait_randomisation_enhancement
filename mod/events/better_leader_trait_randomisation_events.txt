@@ -56,6 +56,28 @@ fleet_event = {
 	}
 }
 
+# marks the science ship's leader as having recently interacted with debris
+fleet_event = {
+	id = better_leader_trait_randomization.22
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = fromfrom
+		fromfrom = {
+			exists = leader
+			leader = { leader_class = scientist }
+		}
+	}
+	immediate = {
+		fromfrom.leader = {
+			set_timed_leader_flag = {
+				flag = was_recently_researching_poi
+				days = 7
+			}
+		}
+	}
+}
+
 # fired by on_leader_spawned and on_ruler_back_to_pre_ruler_class (better_leader_trait_randomization.51, below)
 country_event = {
 	id = better_leader_trait_randomization.50
