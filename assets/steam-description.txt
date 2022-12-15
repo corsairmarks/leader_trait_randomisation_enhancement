@@ -29,7 +29,7 @@ The code in this mod polishes some of the code from the base game to work better
 Optional feature (defaults to disabled): Leaders will have a higher chance to gain traits related to their current role.  This feature is experimental and only applies to scientists at present.  Enable or disable by running this command on the console: [b]event better_leader_trait_randomization.3[/b].  Check the status with [b]trigger is_leader_trait_role_weight_enabled = yes[/b] (showing a green checkmark indicates the feature is enabled, a red x is disabled).
 
 [h2]Compatibility[/h2]
-Built for Stellaris version 3.4 "Cepheus."  Not compatible with achievements.
+Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event [b]leader.20[/b] that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect [b]add_random_leader_trait[/b] that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
 
@@ -48,8 +48,8 @@ This mod can be safely added to or removed from your savegame after the game has
 [h2]Known Issues[/h2]
 This mod overwrites one effect and preempts one event from the base game.  Expect to see two lines in error.log like this:
 [code]
-[15:38:58][game_singleobjectdatabase.h:147]: Object with key: add_random_leader_trait already exists, using the one at  file: common/scripted_effects/better_leader_trait_randomisation_scripted_effect_overrides.txt line: 2
-[15:38:59][eventmanager.cpp:361]: an event with id [leader.20] already exists!  file: events/leader_events_1.txt line: 950
+[15:38:58][game_singleobjectdatabase.h:165]: Object with key: add_random_leader_trait already exists, using the one at  file: common/scripted_effects/better_leader_trait_randomisation_scripted_effect_overrides.txt line: 2
+[15:38:59][eventmanager.cpp:368]: an event with id [leader.20] already exists!  file: events/leader_events_1.txt line: 950
 [/code]
 What this means to you is that this mod will need a compatibility patch to work with other mods that alter the same base Stellaris content.
 
@@ -59,4 +59,4 @@ See [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2553806265
 [h2]Source Code[/h2]
 Hosted on [url=https://github.com/corsairmarks/leader_trait_randomisation_enhancement]GitHub[/url]
 
-[url=https://discord.gg/bHVez2C][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+[url=https://discord.gg/2qjkAF8DY7][img]https://i.imgur.com/4Und3QN.png[/img][/url]
