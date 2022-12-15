@@ -16,6 +16,15 @@ has_xp_penalty_leader_trait = {
 	}
 }
 
+# leader
+has_age_adjustment_leader_trait = {
+	optimize_memory
+	OR = {
+		has_trait = leader_trait_resilient
+		has_trait = leader_trait_substance_abuser
+	}
+}
+
 # leader that is a scientist
 is_scientist_surveying = {
 	optimize_memory

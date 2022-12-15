@@ -37,8 +37,8 @@ add_random_scientist_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_trait = leader_trait_resilient
-					has_trait = leader_trait_substance_abuser
+					has_skill <= 1
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -67,8 +67,7 @@ add_random_scientist_leader_trait = {
 				factor = 0
 				OR = {
 					has_skill <= 1
-					has_trait = leader_trait_substance_abuser
-					has_trait = leader_trait_resilient
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -648,8 +647,8 @@ add_random_admiral_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_trait = leader_trait_resilient
-					has_trait = leader_trait_substance_abuser
+					has_skill <= 1
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -678,8 +677,7 @@ add_random_admiral_leader_trait = {
 				factor = 0
 				OR = {
 					has_skill <= 1
-					has_trait = leader_trait_substance_abuser
-					has_trait = leader_trait_resilient
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -867,8 +865,8 @@ add_random_governor_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_trait = leader_trait_resilient
-					has_trait = leader_trait_substance_abuser
+					has_skill <= 1
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -898,8 +896,7 @@ add_random_governor_leader_trait = {
 				factor = 0
 				OR = {
 					has_skill <= 1
-					has_trait = leader_trait_substance_abuser
-					has_trait = leader_trait_resilient
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					owner = { has_valid_civic = civic_philosopher_king }
@@ -1160,8 +1157,8 @@ add_random_general_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_trait = leader_trait_resilient
-					has_trait = leader_trait_substance_abuser
+					has_skill <= 1
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -1190,8 +1187,8 @@ add_random_general_leader_trait = {
 				factor = 0
 				OR = {
 					has_skill <= 1
-					has_trait = leader_trait_substance_abuser
-					has_trait = leader_trait_resilient
+					has_age_adjustment_leader_trait = yes
+					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
 				}
@@ -1364,8 +1361,8 @@ add_random_ruler_leader_trait = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_trait = leader_trait_resilient
-					has_trait = leader_trait_substance_abuser
+					has_skill <= 1
+					has_age_adjustment_leader_trait = yes
 					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					has_leader_flag = suppress_generic_traits
@@ -1394,8 +1391,8 @@ add_random_ruler_leader_trait = {
 				factor = 0
 				OR = {
 					has_skill <= 1
-					has_trait = leader_trait_substance_abuser
-					has_trait = leader_trait_resilient
+					has_age_adjustment_leader_trait = yes
+					is_robotic_species = yes
 					species = { has_trait = trait_hive_mind }
 					owner = { has_valid_civic = civic_philosopher_king }
 					has_leader_flag = suppress_generic_traits
@@ -2409,6 +2406,13 @@ ensure_minimum_one_random_trait = {
 	}
 	if = {
 		limit = { is_leader_chosen = yes }
+		change_variable = {
+			which = species_leader_trait_accumulator
+			value = 1
+		}
+	}
+	if = {
+		limit = { is_leader_chosen_by_covenant = yes }
 		change_variable = {
 			which = species_leader_trait_accumulator
 			value = 1
