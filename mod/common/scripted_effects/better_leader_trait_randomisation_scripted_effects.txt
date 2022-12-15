@@ -2884,45 +2884,47 @@ convert_bureaucrat_leader_traits = {
 	if = {
 		limit = {
 			has_trait = leader_trait_amplifier
-			owner = { is_machine_empire = no }
+			is_robotic_species = no
 		}
 		remove_trait = leader_trait_amplifier
 		if = {
-			limit = { owner = { is_hive_empire = yes } }
+			limit = { species = { has_trait = trait_hive_mind } }
 			add_trait = leader_trait_mindfulness
 		}
-		else_if = {
-			limit = { owner = { is_regular_empire = yes } }
+		else = {
 			add_trait = leader_trait_bureaucrat
 		}
 	}
 	if = {
 		limit = {
 			has_trait = leader_trait_mindfulness
-			owner = { is_hive_empire = no }
+			limit = { species = { NOT = { has_trait = trait_hive_mind } } }
 		}
 		remove_trait = leader_trait_mindfulness
 		if = {
-			limit = { owner = { is_machine_empire = yes } }
+			limit = { is_robotic_species = yes }
 			add_trait = leader_trait_amplifier
 		}
-		else_if = {
-			limit = { owner = { is_regular_empire = yes } }
+		else = {
 			add_trait = leader_trait_bureaucrat
 		}
 	}
 	if = {
 		limit = {
 			has_trait = leader_trait_bureaucrat
-			owner = { is_regular_empire = no }
+			owner = {
+				OR ={
+					is_robotic_species = yes
+					species = { has_trait = trait_hive_mind }
+				}
+			}
 		}
 		remove_trait = leader_trait_bureaucrat
 		if = {
-			limit = { owner = { is_machine_empire = yes } }
+			limit = { is_robotic_species = yes }
 			add_trait = leader_trait_amplifier
 		}
-		else_if = {
-			limit = { owner = { is_hive_empire = yes } }
+		else = {
 			add_trait = leader_trait_mindfulness
 		}
 	}
