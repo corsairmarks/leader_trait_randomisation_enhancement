@@ -31,7 +31,7 @@ Optional feature (defaults to disabled): Leaders will have a higher chance to ga
 
 Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
 
-Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.  The majority of code improvements are here including removing the second restriction on researching scientists gaining traits.
+Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.
 
 What all this means to you is that this mod will be widely compatible with other mods, as long as they do not also affect these two narrow areas.
 
