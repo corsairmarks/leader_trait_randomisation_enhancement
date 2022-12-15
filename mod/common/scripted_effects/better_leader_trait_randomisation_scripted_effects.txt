@@ -2843,7 +2843,7 @@ convert_bureaucrat_leader_traits = {
 	if = {
 		limit = {
 			has_trait = leader_trait_mindfulness
-			limit = { species = { NOT = { has_trait = trait_hive_mind } } }
+			species = { NOT = { has_trait = trait_hive_mind } }
 		}
 		remove_trait = leader_trait_mindfulness
 		if = {
