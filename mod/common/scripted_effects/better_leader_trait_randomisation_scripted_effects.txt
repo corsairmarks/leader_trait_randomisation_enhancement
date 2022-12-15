@@ -1883,7 +1883,7 @@ ensure_appropriate_leader_traits_demoted_ruler = {
 	remove_invalid_leader_traits = yes
 	set_timed_leader_flag = {
 		flag = suppress_generic_traits
-		days = 7
+		days = 1
 	}
 	ensure_minimum_one_random_trait = yes
 	# because the leader was previously a ruler, we do actually want to keep their generic ruler traits
