@@ -2829,7 +2829,13 @@ convert_bureaucrat_leader_traits = {
 	if = {
 		limit = {
 			has_trait = leader_trait_amplifier
-			is_robotic_species = no
+			OR = {
+				is_robotic_species = no
+				NAND = {
+					species = { has_trait = trait_cybernetic }
+					owner = { has_valid_civic = civic_machine_assimilator }
+				}
+			}
 		}
 		remove_trait = leader_trait_amplifier
 		if = {
@@ -2847,7 +2853,15 @@ convert_bureaucrat_leader_traits = {
 		}
 		remove_trait = leader_trait_mindfulness
 		if = {
-			limit = { is_robotic_species = yes }
+			limit = {
+				OR = {
+					is_robotic_species = yes
+					AND = {
+						species = { has_trait = trait_cybernetic }
+						owner = { has_valid_civic = civic_machine_assimilator }
+					}
+				}
+			}
 			add_trait = leader_trait_amplifier
 		}
 		else = {
@@ -2860,13 +2874,25 @@ convert_bureaucrat_leader_traits = {
 			owner = {
 				OR ={
 					is_robotic_species = yes
+					AND = {
+						species = { has_trait = trait_cybernetic }
+						owner = { has_valid_civic = civic_machine_assimilator }
+					}
 					species = { has_trait = trait_hive_mind }
 				}
 			}
 		}
 		remove_trait = leader_trait_bureaucrat
 		if = {
-			limit = { is_robotic_species = yes }
+			limit = {
+				OR = {
+					is_robotic_species = yes
+					AND = {
+						species = { has_trait = trait_cybernetic }
+						owner = { has_valid_civic = civic_machine_assimilator }
+					}
+				}
+			}
 			add_trait = leader_trait_amplifier
 		}
 		else = {

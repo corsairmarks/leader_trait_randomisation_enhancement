@@ -72,7 +72,9 @@ What this means to you is that this mod will need a compatibility patch to work 
 * 2.2.1 Fix bug with Clone Soldier handling - was improperly adding the trait when it should have been removed instead
 * 3.0.0 Update for Stellaris version 3.3.0 "Libra" - integrate underlying changes from the base game
 * 4.0.0 Update for Stellaris version 3.4 "Cepheus" - use memory optimization feature for effects and triggers
-* 5.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax") - add randomisation support for the new Mindful scientist trait
+* 5.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
+    * Add randomisation support for the new Mindful scientist trait
+    * Unity generation traits are now based on species (normal/machine/hive) rather than authority - that was previously required because of empire-specific job boosts before the Unity rework
 
 ## Source Code
 
