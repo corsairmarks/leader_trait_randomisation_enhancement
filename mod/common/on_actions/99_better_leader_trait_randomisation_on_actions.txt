@@ -88,6 +88,6 @@ on_arch_site_finished = {
 # fromfrom = controller of destroyed ship
 on_debris_scavenged_and_researched = {
 	events = {
-		better_leader_trait_randomization.22
+		# better_leader_trait_randomization.22
 	}
 }

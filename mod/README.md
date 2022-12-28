@@ -75,6 +75,7 @@ What this means to you is that this mod will need a compatibility patch to work 
 * 5.0.0 Update for Stellaris version 3.6 "Orion" (and changes from version 3.5 "Fornax")
     * Add randomisation support for the new Mindful scientist trait
     * Unity generation traits are now based on species (normal/machine/hive) rather than authority - that was previously required because of empire-specific job boosts before the Unity rework
+* 5.0.1 Remove event trigger from `on_debris_scavenged_and_researched` - it doesn't have a reference to the science vessel that interacted with the debris
 
 ## Source Code
 
