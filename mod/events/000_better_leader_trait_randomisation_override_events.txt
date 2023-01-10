@@ -16,8 +16,8 @@ country_event = {
 	is_triggered_only = yes
 	# trigger to filter out leaders who have already gained a trait
 	trigger = {
-		exists = FROM
-		FROM = {
+		exists = from
+		from = {
 			OR = {
 				num_traits < 3
 				AND = {
@@ -32,7 +32,7 @@ country_event = {
 		}
 	}
 	immediate = {
-		FROM = {
+		from = {
 			random_list = {
 				80 = {
 					modifier = {
