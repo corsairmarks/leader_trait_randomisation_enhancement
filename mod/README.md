@@ -76,6 +76,7 @@ What this means to you is that this mod will need a compatibility patch to work 
     * Add randomisation support for the new Mindful scientist trait
     * Unity generation traits are now based on species (normal/machine/hive) rather than authority - that was previously required because of empire-specific job boosts before the Unity rework
 * 5.0.1 Remove event trigger from `on_debris_scavenged_and_researched` - it doesn't have a reference to the science vessel that interacted with the debris
+* 5.1.0 Add a compatibility trigger for other mods to check whether this one is active
 
 ## Source Code
 
