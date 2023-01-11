@@ -35,6 +35,9 @@ Most of this mod is custom code, but it does replace two small parts of the base
 
 What all this means to you is that this mod will be widely compatible with other mods, as long as they do not also affect these two narrow areas.
 
+[h3]When to Install[/h3]
+This mod can be safely added to or removed from your savegame after the game has started. It is implemented through events, effects, and triggers without adding or removing gameplay objects. If you remove it, you will keep any leaders and their existing traits, but further leaders and leader level-ups will use the default code. Back up your savegame before trying to remove a mod.
+
 [h3]Recommended Companion Mods[/h3]
 Like leaders?  Try a couple of my other leader-related mods that work with this one.
 [list]
@@ -42,9 +45,6 @@ Like leaders?  Try a couple of my other leader-related mods that work with this 
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2498166286]Leader Traits: Scientist AI Assistant Upgrader[/url] will help your scientists upgrade to "Sapient AI Assistants" from "Custom AI Assistants" when you discover the right technology
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2553818684]Retain Leaders from Integrated Subjects[/url] will let you choose whether you would like to keep leaders from integrated subjects or conquered/infiltrated primitives
 [/list]
-[h3]When to Install[/h3]
-This mod can be safely added to or removed from your savegame after the game has started. It is implemented through events, effects, and triggers without adding or removing gameplay objects. If you remove it, you will keep any leaders and their existing traits, but further leaders and leader level-ups will use the default code. Back up your savegame before trying to remove a mod.
-
 [h2]Known Issues[/h2]
 This mod overwrites one effect and preempts one event from the base game.  Expect to see two lines in error.log like this:
 [code]
