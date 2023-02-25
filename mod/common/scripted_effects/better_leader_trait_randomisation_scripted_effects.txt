@@ -985,8 +985,15 @@ add_random_governor_leader_trait = {
 					has_trait = leader_trait_iron_fist
 					owner = {
 						OR = {
-							allows_slavery = no
-							is_machine_empire = yes
+							is_gestalt = yes
+							AND = {
+								allows_slavery = no
+								check_modifier_value = {
+									modifier = country_pop_enslaved_mult
+									value <= 0
+								}
+								count_enslaved_species = { count <= 0 }
+							}
 						}
 					}
 				}
