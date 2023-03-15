@@ -29,7 +29,7 @@ Optional feature (defaults to disabled): Leaders will have a higher chance to ga
 
 ## Compatibility
 
-Built for Stellaris version 3.6 "Orion."  Not compatible with achievements.
+Built for Stellaris version 3.7 "Canis Minor."  Not compatible with achievements.
 
 Most of this mod is custom code, but it does replace two small parts of the base game's code.  First, it preempts the event `leader.20` that is responsible for triggering leader level-up trait randomisation.  Notably this was one of the two places that restricted researching scientists from being able to gain traits.  Second, it replaces the effect `add_random_leader_trait` that does the actual randomisation.
 
@@ -78,6 +78,9 @@ What this means to you is that this mod will need a compatibility patch to work 
 * 5.0.1 Remove event trigger from `on_debris_scavenged_and_researched` - it doesn't have a reference to the science vessel that interacted with the debris
 * 5.1.0 Add a compatibility trigger for other mods to check whether this one is active
 * 5.2.0 Match criteria for randomizing Trait: Iron Fist with the requirements on the trait itself (no gestalts; must allow slavery or have a percent-enslaved modifier or have at least one enslaved species)
+* 6.0.0 Update for Stellaris version 3.7 "Canis Minor"
+    * Support new scientist Archaeostudies expertise
+    * Support new Trickster variant introduced with First Contact
 
 ## Source Code
 
