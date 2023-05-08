@@ -1,3 +1,5 @@
+[b][i]DEPRECATED:[/i][/b] Due to the changes in Stellaris version 3.8 "Gemini" to how leaders gain traits (and trait "levels") as they level up, this mod is no longer applicable. It has been discontinued.
+
 [h1]Overview[/h1]
 Frustrated that some leader traits can't be gained on level-up?  Or maybe you'd like your robotic/synthetic leaders to use the machine-specific traits too?  Then this mod is for you!
 
