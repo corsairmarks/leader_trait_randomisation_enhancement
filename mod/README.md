@@ -83,6 +83,7 @@ What this means to you is that this mod will need a compatibility patch to work 
 * 6.0.0 Update for Stellaris version 3.7 "Canis Minor"
     * Support new scientist Archaeostudies expertise
     * Support new Trickster variant introduced with First Contact
+* 6.0.1 Mark as deprecated
 
 ## Source Code
 
